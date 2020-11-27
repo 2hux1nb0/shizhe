@@ -1,0 +1,322 @@
+[ 2020-05-07T23:40:14+08:00 ] 127.0.0.1 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001204s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+SQL: SHOW COLUMNS FROM `website` [ RunTime:0.1195s ]
+SQL: SELECT * FROM `website`  [ RunTime:0.0167s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `type` WHERE ( pid=0 )  [ RunTime:0.0187s ]
+SQL: SELECT * FROM `type` WHERE ( pid=73 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `type` WHERE ( pid=75 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=89 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=121 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=122 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=123 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=124 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=90 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=103 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=105 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=76 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=129 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=130 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=131 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=77 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=109 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=134 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=135 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=84 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=86 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=132 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=133 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=88 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=91 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=92 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=119 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=120 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=125 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=126 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=127 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=128 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `resources` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `resources` ORDER BY time desc LIMIT 9   [ RunTime:0.0371s ]
+SQL: SELECT * FROM `resources` WHERE ( class=1 ) LIMIT 9   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `resources` WHERE ( class=2 ) LIMIT 9   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `resources` WHERE ( class=3 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=4 ) LIMIT 9   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `resources` WHERE ( class=5 ) LIMIT 9   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `resources` WHERE ( class=6 ) LIMIT 9   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `resources` WHERE ( class=7 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=8 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=9 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=10 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=11 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=12 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=13 ) LIMIT 9   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `resources` WHERE ( class=14 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=15 ) LIMIT 9   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `resources` WHERE ( class=16 ) LIMIT 9   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `resources` WHERE ( class=17 ) LIMIT 9   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `resources` WHERE ( class=18 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=19 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=20 ) LIMIT 9   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `resources` WHERE ( class=21 ) LIMIT 9   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `resources` WHERE ( class=22 ) LIMIT 9   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `resources` WHERE ( class=23 ) LIMIT 9   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `resources` WHERE ( class=24 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=25 ) LIMIT 9   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `resources` WHERE ( class=26 ) LIMIT 9   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003424s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003474s ]
+NOTIC: [8] Undefined variable: servername E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 133 行.
+NOTIC: [8] Undefined variable: servername E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 176 行.
+NOTIC: [8] Undefined variable: servername E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 184 行.
+NOTIC: [8] Undefined variable: servername E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 187 行.
+NOTIC: [8] Undefined index: aliress E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 215 行.
+NOTIC: [8] Undefined index: aliress E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 215 行.
+NOTIC: [8] Undefined index: aliress E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 215 行.
+NOTIC: [8] Undefined index: aliress E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 215 行.
+NOTIC: [8] Undefined index: aliress E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 215 行.
+NOTIC: [8] Undefined index: aliress E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 215 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 1089 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 1089 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 1416 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 1416 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 1743 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 1743 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 2067 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 2067 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 2391 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 2391 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 2715 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 2715 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 3042 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 3042 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 3366 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 3366 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 3690 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 3690 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4014 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4014 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4341 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4341 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4668 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4668 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4995 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4995 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 5322 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 5322 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 5649 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 5649 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 5973 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 5973 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 6300 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 6300 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 6624 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 6624 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 6948 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 6948 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 7272 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 7272 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 7596 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 7596 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 7920 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 7920 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 8244 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 8244 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 8571 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 8571 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 8898 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 8898 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 9225 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 9225 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.409715s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.409806s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001292s ]
+NOTIC: [8] Undefined variable: data E:\shizhe\Shizhe\Home\Controller\FootersController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `url` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `url` LIMIT 12   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `website` LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000023s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.160732s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004406s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.035587s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.038479s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\shizhe\ThinkPHP\Library\Think\View.class.php:95) E:\shizhe\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\shizhe\ThinkPHP\Library\Think\View.class.php:95) E:\shizhe\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\shizhe\ThinkPHP\Library\Think\View.class.php:95) E:\shizhe\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001806s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001844s ]
+
+[ 2020-05-07T23:40:16+08:00 ] 127.0.0.1 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001640s ]
+SQL: SHOW COLUMNS FROM `website` [ RunTime:0.0147s ]
+SQL: SELECT * FROM `website`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `type` WHERE ( pid=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=73 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=75 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=89 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=121 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=122 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=123 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=124 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=90 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=103 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=105 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=76 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=129 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=130 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=131 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=77 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=109 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=134 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=135 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=84 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=86 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=132 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=133 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `type` WHERE ( pid=88 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=91 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `type` WHERE ( pid=92 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=119 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=120 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=125 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=126 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `type` WHERE ( pid=127 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `type` WHERE ( pid=128 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `resources` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `resources` ORDER BY time desc LIMIT 9   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `resources` WHERE ( class=1 ) LIMIT 9   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `resources` WHERE ( class=2 ) LIMIT 9   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `resources` WHERE ( class=3 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=4 ) LIMIT 9   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `resources` WHERE ( class=5 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=6 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=7 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=8 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=9 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=10 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=11 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=12 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=13 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=14 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=15 ) LIMIT 9   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `resources` WHERE ( class=16 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=17 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=18 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=19 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=20 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=21 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=22 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=23 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=24 ) LIMIT 9   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resources` WHERE ( class=25 ) LIMIT 9   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `resources` WHERE ( class=26 ) LIMIT 9   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003519s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003573s ]
+NOTIC: [8] Undefined variable: servername E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 133 行.
+NOTIC: [8] Undefined variable: servername E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 176 行.
+NOTIC: [8] Undefined variable: servername E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 184 行.
+NOTIC: [8] Undefined variable: servername E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 187 行.
+NOTIC: [8] Undefined index: aliress E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 215 行.
+NOTIC: [8] Undefined index: aliress E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 215 行.
+NOTIC: [8] Undefined index: aliress E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 215 行.
+NOTIC: [8] Undefined index: aliress E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 215 行.
+NOTIC: [8] Undefined index: aliress E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 215 行.
+NOTIC: [8] Undefined index: aliress E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 215 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 1089 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 1089 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 1416 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 1416 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 1743 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 1743 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 2067 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 2067 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 2391 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 2391 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 2715 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 2715 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 3042 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 3042 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 3366 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 3366 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 3690 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 3690 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4014 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4014 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4341 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4341 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4668 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4668 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4995 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 4995 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 5322 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 5322 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 5649 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 5649 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 5973 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 5973 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 6300 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 6300 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 6624 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 6624 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 6948 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 6948 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 7272 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 7272 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 7596 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 7596 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 7920 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 7920 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 8244 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 8244 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 8571 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 8571 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 8898 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 8898 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 9225 行.
+NOTIC: [8] Undefined offset: 9 E:\shizhe\Shizhe\Runtime\Cache\Home\095cd5c34304128fe5fd921a50d027da.php 第 9225 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.316559s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.316601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000908s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000941s ]
+NOTIC: [8] Undefined variable: data E:\shizhe\Shizhe\Home\Controller\FootersController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `url` [ RunTime:0.0195s ]
+SQL: SELECT * FROM `url` LIMIT 12   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `website` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000024s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.201886s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003020s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.027149s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.029159s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\shizhe\ThinkPHP\Library\Think\View.class.php:95) E:\shizhe\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\shizhe\ThinkPHP\Library\Think\View.class.php:95) E:\shizhe\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\shizhe\ThinkPHP\Library\Think\View.class.php:95) E:\shizhe\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000861s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000890s ]
+

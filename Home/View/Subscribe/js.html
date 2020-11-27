@@ -1,0 +1,61 @@
+<script type="text/javascript">
+    $('#scroll_left li').click(function(){
+        var uid = $(this).attr('uid');
+
+       $.get('{:U("Home/Subscribe/sendSubscribe")}',{uid:uid},function(data){
+
+			var box = '<div id="yk-toolbar-con-update" class="yk-toolbar-con-update"><div data_date="20150803" class="middle-line mlr_10"><span class="time-dot">今天</span></div><div class="header-nav header-nav-sub"><span class="tit"><a target="_blank" href="#"><img src="#">aaa</a></span><span class="f_14 c_gray"></span></div><div class="clearfix pb20 clearfix_login"><div class="collgrid4w"><div class="items"><div class="clear"></div></div></div></div></div>';
+
+
+			$('#yk-toolbar-con-feed').empty();
+			$('#yk-toolbar-con-feed').append(box);
+			var tit = '<img src='+data['user'].photo+'>'+data['user'].username;
+			$('.header-nav-sub').find('a').empty().append(tit);
+
+	    	if(data[0].length==0)
+	    	{
+	    		var ul = '<div class="yk-toolbar-con-noResult"><div class="icon-msg-noResult"></div><div class="f_18 t_c">最近没更新，去<a target="_blank" href="#" class="c_blue">TA的频道</a>看看吧</div></div>';
+	    		$('.items').append(ul);
+	    	}else{
+
+		    	for(var i=0;i<data[0].length;i++)
+		    	{
+		    		var ul = '<ul id="u'+i+'" class="v"><li class="v_link"><a href="#"></a></li><li class="v_thumb"><img src="#"></li><li class="v_menu"></li><li class="v_time"><span class="num"></span><span class="bg"></span></li><li class="v_title"><a href="#">#</a></li></ul>';
+		    		$('.items').append(ul);
+					$('#u'+i+' li').eq(0).find('a').attr('href','/Youku/index.php/Home/Play/index.html?videoId='+data[0][i].id);
+					$('#u'+i+' li').eq(1).find('img').attr('src',data[0][i].pic);
+					$('#u'+i+' li').eq(4).find('a').html(data[0][i].title);
+				}
+			}
+	       
+        },'json');
+
+    });
+       $.get('{:U("Home/Subscribe/sendSubscribe")}',{uid:{$suser[0]['id']}},function(data){
+
+			var box = '<div id="yk-toolbar-con-update" class="yk-toolbar-con-update"><div data_date="20150803" class="middle-line mlr_10"><span class="time-dot">今天</span></div><div class="header-nav header-nav-sub"><span class="tit"><a target="_blank" href="#"><img src="#">aaa</a></span><span class="f_14 c_gray"></span></div><div class="clearfix pb20 clearfix_login"><div class="collgrid4w"><div class="items"><div class="clear"></div></div></div></div></div>';
+
+
+			$('#yk-toolbar-con-feed').empty();
+			$('#yk-toolbar-con-feed').append(box);
+			var tit = '<img src='+data['user'].photo+'>'+data['user'].username;
+			$('.header-nav-sub').find('a').empty().append(tit);
+
+	    	if(data[0].length==0)
+	    	{
+	    		var ul = '<div class="yk-toolbar-con-noResult"><div class="icon-msg-noResult"></div><div class="f_18 t_c">最近没更新，去<a target="_blank" href="#" class="c_blue">TA的频道</a>看看吧</div></div>';
+	    		$('.items').append(ul);
+	    	}else{
+
+		    	for(var i=0;i<data[0].length;i++)
+		    	{
+		    		var ul = '<ul id="u'+i+'" class="v"><li class="v_link"><a href="#"></a></li><li class="v_thumb"><img src="#"></li><li class="v_menu"></li><li class="v_time"><span class="num"></span><span class="bg"></span></li><li class="v_title"><a href="#">#</a></li></ul>';
+		    		$('.items').append(ul);
+					$('#u'+i+' li').eq(0).find('a').attr('href','/Youku/index.php/Home/Play/index.html?videoId='+data[0][i].id);
+					$('#u'+i+' li').eq(1).find('img').attr('src',data[0][i].pic);
+					$('#u'+i+' li').eq(4).find('a').html(data[0][i].title);
+				}
+			}
+	       
+        },'json');
+</script>

@@ -1,0 +1,144 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>个人设置</title>
+
+    <link type="text/css" rel="stylesheet" href="/Public/Home/css/setting/youku.css"/>
+    <link type="text/css" rel="stylesheet" href="/Public/Home/css/setting/i.css"/>
+    <link type="text/css" rel="stylesheet" href="/Public/Home/css/setting/grid.css"/>
+    <link type="text/css" rel="stylesheet" href="/Public/Home/css/setting/default.css"/>
+    <link type="text/css" rel="stylesheet" href="/Public/Home/css/setting/home.css"/>
+
+    <!-- <script src="/Public/Home/js/setting/jquery.js"></script> -->
+
+    <!-- <script src="/Public/Home/js/setting/prototype.js"></script> -->
+
+</head>
+
+<body class="yk-w970">
+
+
+
+
+<div class="YK yk-con">
+         <div class="YK_miniheader yk-row">
+            <div class="YK_masthead yk-w970-col18 yk-w1190-col22">
+                <div class="YK_mainnav">
+                    <div class="title"><a href="javascript:void(0)">设置</a></div>
+                    <ul >
+                        <li class="current"><a  href="/index.php/Home/Setting/index" >基本设置</a></li>
+                        <li  class="" ><a href="/index.php/Home/Setting/setting" >安全设置</a></li>
+                    </ul>
+                </div>
+                <div class="YK_operate"><a href="<?php echo U('Home/Index/index');?>">返回首页</a></div>
+                  <div class="clear"></div>
+            </div>
+        </div>
+<div class="yk-row">
+<div class="YK_dashboard yk-col3">
+        <!--视频管理-->
+		<div class="YK_dashboard_inner">
+							<ul class="YK_menu">
+					<li  ><a href="/index.php/Home/Setting/index">基本资料</a></li>
+					<li class="current"  ><a href="#">修改头像</a></li>
+
+				</ul>
+						<ul class="YK_submenu">
+				<li><a href="/index.php/Home/Space/index/id/<?php echo ($model["id"]); ?>" target="_blank">装扮空间</a></li>
+			</ul>
+		</div>
+    </div>
+
+    <div class="YK_main yk-w970-col15 yk-w1190-col19">
+        <div class="YK_setting">
+
+	<div class="content">
+		<div id="set_avatar_wrap"><div id="set_avatar">
+<!-- <script type="text/javascript" src="/Public/Home/js/setting/jquery.jcrop.js"></script>
+<script type="text/javascript" src="/Public/Home/js/setting/avatar.js"></script>
+<link rel="stylesheet" href="/Public/Home/css/setting/jquery.jcrop.css"/> -->
+
+<div class="content">
+	<div class="modify_avatar">
+		       <form method="post" action='/index.php/Home/Setting/insert' class="form-horizontal" enctype="multipart/form-data">
+                                 <input type="hidden" name="id" value="<?php echo ($model["id"]); ?>">
+
+		<div id="uploader" class="upload-avatar">
+		                      <label>上传头像：</label>
+			<div class="form_btn form_btn_m form_btnsub_m" style="position:relative;">
+				<input type="file" name="photo" class="form-control" value="">
+
+				<div id="avatarSwfU"  ><div id="avatorPlh"></div></div>
+			</div>
+			<span id="tips" class="subtips">(支持JPG,PNG,GIF格式的图片)</span>
+		</div><!-- .upload-avatar -->
+		<div class="showbox">
+			<div class="panel">
+				<img name="photo" src="<?php echo ($model["photo"]); ?>" id="target">
+			</div><!-- .panel -->
+			<div class="handle">
+				<div class="large">
+					<div style="width:80px;height:80px;overflow:hidden;border:1px solid #c5c5c5;" >
+						<img  src="<?php echo ($model["photo"]); ?>" id="preview_l">
+					</div>
+					<span>大头像80*80</span>
+				</div>
+				<div class="medium">
+					<div style="width:50px;height:50px;overflow:hidden;border:1px solid #c5c5c5;">
+						<img src="<?php echo ($model["photo"]); ?>" id="preview_m">
+					</div>
+					<span>中头像50*50</span>
+				</div>
+				<div class="small">
+					<div style="width:30px;height:30px;overflow:hidden;border:1px solid #c5c5c5;">
+						<img src="<?php echo ($model["photo"]); ?>" id="preview_s">
+					</div>
+					<span>小头像30*30</span>
+				</div>
+			</div><!-- .handle -->
+		</div><!-- .showbox -->
+		<div class="clear"></div>
+		<div class="action">
+			<div id="avatarSave" class="form_btn form_btn_m form_btnmaj_m form_btn_disabled">
+			         <button id="send" class="btn btn-info btn-large"   onclick='validate()' type="submit">保存</button>
+			
+			</div><!-- .form_btn -->
+		</div><!-- .action -->
+	</div><!-- .modify_avatar -->
+		</form>
+	<div class="aside">
+		<h3>完善个人资料</h3>
+		<p>定制专属于你的个性头像，让自己成为大家眼中闪亮的焦点</p>
+	</div><!-- .aside -->
+</div><!-- .content -->
+
+
+</div>
+</div>
+	</div>
+</div>
+</div><!--main end-->
+<div class="clear"></div>
+</div><!--layout end-->
+</div><!--YKU end-->
+
+<!--小页尾-->
+
+
+<div class="s_miniFooter">
+    <div class="footerBox">
+        <div class="copyright">
+            Copyright©2020 师者 shizhe.com 版权所有
+            <a href="/index.php/Home/Setting/upload-provision.html" target="_blank">反盗版盗链声明</a>
+            <a href="#" target="_blank">京ICP证060288号</a>
+            <a href="#" target="_blank">
+                <span class="icp" title="经营性网站备案"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

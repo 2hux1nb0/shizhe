@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=980" />
+        <title>
+            我收藏的视频
+            师者视频空间-聊聊学术，聊聊知识！
+        </title>
+        <link href="__PUBLIC__/Home/css/qheader.css" type="text/css" rel="stylesheet">
+        <link href="__PUBLIC__/Home/css/chuda_qheader.css" type="text/css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/css/youku.css"/>
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/css/i.css"/>
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/css/default.css"/>
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/css/home.css"/>
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/css/grid.css"/>
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/css/home.new.css"/>
+        <style type="text/css" media="screen">
+            .XXXX{
+                width: 60px;
+                height: 60px;
+                background:#ddd;
+                -moz-border-radius: 1em;
+                -webkit-border-radius: 1em;
+                border-radius: 1em;
+                 opacity:0.6;
+
+
+            }
+            .XXXX{
+                font-size: 50px;
+                color:#f00;
+                line-height:60px;
+                text-align:center;
+                z-index:100;
+                position: absolute;
+                left:160px;
+                bottom: 155px;
+
+}
+            }
+        </style>
+        <script src="__PUBLIC__/Home/js/jquery.js"></script>
+        <script src="__PUBLIC__/Home/js/prototype.js"></script>
+    </head>
+    <body class="yk-w1190 body-offset-w1190">
+        <script type="text/javascript" src="__PUBLIC__/Home/js/resize.js"></script>
+        <span style="display:none;" id='is_self_exist' data="%22uid%22%3A451596623"></span>
+        <div class="window">
+            <div class="screen">
+                <link href="__PUBLIC__/Home/css/qheader.css" type="text/css" rel="stylesheet" />
+                <link href="__PUBLIC__/Home/css/user-grade-icon.css" type="text/css" rel="stylesheet" />
+                <div class="yk-header yk-header-fixed" id="qheader">
+                    <!-- 头部 -->
+                    <include file="Public/header"/>
+                    <!-- 头部结束 -->
+                    <iframe class="mask" frameborder="0" scrolling="no" style="width:100%;height:61px;"></iframe>
+                </div><!-- yk-header end -->
+            </div>
+
+            <script src="__PUBLIC__/Home/js/chuda.js"></script>
+            <script src="__PUBLIC__/Home/js/qheader.js"></script>
+            <script src="__PUBLIC__/Home/js/qwindow.js"></script>
+            <script src="__PUBLIC__/Home/js/popup.js"></script>
+            <div class="yk-con">
+                <div class="YK_miniheader" id="home_miniheader_ck">
+                    <div class="YK_masthead">
+                        <div class="YK_mainnav">
+                            <div class="title"><a href="" onclick="hz.postHz(4007455, 1000502);"  id="u_index_ck">个人中心</a></div>
+                            <ul>
+                                <li><a onclick="hz.postHz(4007460, 1000502);" href="{:U('Home/Record/index')}">观看记录</a></li>
+                                <li class="current"><a onclick="hz.postHz(4007462, 1000502);" href="/u/home?type=favorite" id="u_favorite_ck">我的收藏</a></li>
+                                <li><a onclick="hz.postHz(4007463, 1000502);" href="{:U('Home/Subscribe/index')}" id="u_subscribe_ck">我的订阅</a></li>
+                        </div>
+                        <!-- <div class="YK_operate"><a onclick="hz.postHz(4007456, 1000502);" href="/u/UMTgwNjM4NjQ5Mg=="  target="_blank" id="u_space_ck">我的频道</a><span>|</span><a onclick="hz.postHz(4007457, 1000502);" href="/u/videos"  target="_blank" id="u_videos_ck">视频管理</a></div> -->
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="s_body">
+                <div class="YK" >
+                    <div class="yk-con" _uc="homeFavFriends" pagename="favorite">
+                        <div id="fav_video_wrap"><div id="fav_video" params="newFavorite"><div class="yk-collect">
+                                    <div class="YK_subtab">
+                                        <ul>
+                                            <!-- <li  ><a href="/u/home?type=favorite&sub=show">节目</a></li> -->
+                                            <li class="current"><a href="">视频</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="yk-collect-control">
+                                        <!-- <a class="yk-collect-make" href="/u/playlists">
+                                        <i class="ico-playlist"></i>制作专辑</a> -->
+                                        <div class="form_btn form_btn_m form_btnsub_m btn-edit" _click="manage" data-stat-role="ck"><span class="form_btn_text" id='guanli'><span class="form_btn_icon form_btn_icon_left form_btn_icon_settings" ></span><span  class='guanlis'>管理收藏</span></span></div>
+
+                                    </div>		<div class="yk-row">
+                                        <div class="yk-offset2 yk-w970-col16 yk-w1190-col20">
+                                            <div class="yk-row yk-v-190">
+                                            <foreach name='data' item='vo' key='k'>
+
+
+                                                 <div class="v yk-col4"  value ='{$vo.id}'data="">
+                                                    <div class="v-thumb">
+                                                        <img replace="false"src="{$vo.pic}" alt="{$vo.data}">
+                                                        <div class="v-thumb-tagrb"><!-- <span class="v-time">108:07</span> --></div>
+                                                    </div>
+                                                    <div class="v-link">
+                                                        <a href="{:U('Home/Play/index')}?videoId={$vo.rid}" target="video" title="{$vo.title}"></a>
+                                                    </div>
+                                                    <div class="v-recover">
+                                                        <div class="bg"></div>
+
+                                                    </div>
+                                                    <div class="v-meta va">
+
+                                                        <div class="v-meta-title">
+                                                            <a target="video" title="{$vo.title}" charset="109909-92779-1-4" href="{:U('Home/Play/index')}?videoId={$vo.rid}">{$vo.title}</a></div>
+                                                        <div class="v-meta-entry">{$vo.times} <!-- <a cardplace="tb" encode_uid="UMzg5ODE2MTgw" title="师者会员" target="_blank" href="" class="YK_id v-username"><i class="ico-user"></i>师者会员</a> -->
+                                                        </div>
+                                                        <div class="v-meta-overlay"></div>
+                                                    </div>
+                                                   <a class="XXXX"   style='display:none'>X</a>
+
+                                                </div>
+
+
+
+                                            </foreach>
+
+
+
+
+
+
+
+
+                                  <!--               <div class="v yk-col4" data="%22id%22%3A%22322301811%22%2C%22type%22%3A%22video%22">
+                                                    <div class="v-thumb">
+                                                        <img replace="false"src="__PUBLIC__/home/picture/d51b9fcfb3a04fe8a7f5cd590b7c6b1e.gif" alt="摇滚英雄">
+                                                        <div class="v-thumb-tagrb"><span class="v-time">87:55</span></div>
+                                                    </div>
+                                                    <div class="v-link">
+                                                        <a href="" target="video" title="摇滚英雄"></a>
+                                                    </div>
+                                                    <div class="v-recover">
+                                                        <div class="bg"></div>
+                                                        <div class="form_btn form_btn_m form_btnmaj_m" data-stat-role="ck"><span class="form_btn_text" _click="refav">重新收藏</span></div>
+                                                    </div>
+                                                    <div class="v-meta va">
+                                                        <div class="v-meta-title">
+                                                            <a target="video" title="摇滚英雄" charset="109909-92779-1-4" href="">摇滚英雄</a></div>
+                                                        <div class="v-meta-entry">2015-08-04 <a cardplace="tb" encode_uid="UMzg5ODE2MTgw" title="师者会员" target="_blank" href="" class="YK_id v-username"><i class="ico-user"></i>师者会员</a>
+                                                        </div>
+                                                        <div class="v-meta-overlay"></div>
+                                                    </div>
+                                                    <a class="v-record-delete" href="javascript:;" _click="cancelfav"></a>
+                                                </div>
+ -->
+
+
+                                            </div>
+
+                                        </div><!-- end yk-offset2 -->
+                                    </div><!-- yk-row -->
+
+                                </div><!-- end yk-collect -->
+
+
+
+
+                                <div class="qPager">
+                                    <div class="stat">
+                                        第1-20/31条
+                                    </div>
+                                    <ul class="turn">
+                                        <li class="pre" title="上一页"><span><em class="ico_pre"></em>上一页</span></li>
+
+                                        <li class="next" title="下一页"><a href="/u/home?page=2&type=favorite&sub=video" ><em class="ico_next"></em>下一页</a></li>
+                                    </ul><!-- .turn -->
+
+                                    <ul class="pages">
+                                        <li class="current"><span>1</span></li>
+                                        <li><a href="/u/home?page=2&type=favorite&sub=video">2</a></li>
+                                    </ul><!-- .pages -->
+                                </div><!-- .qPager --></div></div>
+                        <div class="clear"></div>
+                    </div><!--yk-con end-->
+                </div><!--YK end-->
+            </div><!--s_body-->
+            <!--小页尾-->
+
+            <div class="s_miniFooter">
+                <div class="footerBox">
+                    <div class="copyright">
+                        Copyright©2020 师者 shizhe.com 版权所有
+                        <a href="{:U('Home/Upload/upload-provision')}" target="_blank">反盗版盗链声明</a>
+                        <a href="" target="_blank">京ICP证060288号</a>
+                        <a href="" target="_blank">
+                            <span class="icp" title="经营性网站备案"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <script src="__PUBLIC__/Home/js/iresearch.js"></script>
+            <script src="__PUBLIC__/Home/js/cps.js"></script>
+            <noscript>
+            <imgsrc="__PUBLIC__/home/picture/add08bda9bcb4336810b5ac9a5f112d5.gif" />
+            </noscript>
+            <!-- End comScore Tag -->
+        </div><!--screen end-->
+    </div><!--window end-->
+</div>
+<script>var need_guide = false;</script>
+<script src="__PUBLIC__/Home/js/qcard.js"></script>
+<script src="__PUBLIC__/Home/js/qwindow.js"></script>
+<script src="__PUBLIC__/Home/js/hash.js"></script>
+<script src="__PUBLIC__/Home/js/commonv2.js"></script>
+<script src="__PUBLIC__/Home/js/guide.js"></script>
+<script src="__PUBLIC__/Home/js/city.js"></script>
+<script src="__PUBLIC__/Home/js/share.js"></script>
+<script src="__PUBLIC__/Home/js/hzclick.js"></script>
+<script src="__PUBLIC__/Home/js/manager.js"></script>
+<div style="display: none; opacity: 1;" id="sideBar" class="sidebar">
+    <a id="btn-gotop" href="#Top" style="display: none;"><i class="ico-gotop"></i><span class="sidebar-overlay"></span></a>
+    <a target="_blank" href="" class="feedBack"><i class="ico-feedback"></i><br><span id="test">反馈</span><span class="sidebar-overlay"></span></a>
+</div>
+<script src="__PUBLIC__/Home/js/sidebar_pc.js"type="text/javascript"></script>
+
+<iframe name="hideSubFrame" id="hideSubFrame" style="width:0;height:0;display:none;"></iframe>
+<script src="__PUBLIC__/Home/js/playlist.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/Home/js/tdstat.js"></script>
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/sidetool.css"/>
+        <script src="__PUBLIC__/Home/js/sidetool.js"></script>
+        <script src="__PUBLIC__/Home/js/jquery.js"></script>
+
+        <script type="text/javascript">
+        $(function(){
+            $('#guanli').toggle(function(){
+                $('.XXXX').show();
+                $('.guanlis').html('完成');
+                $('.XXXX').click(function (){
+                    var dangqian = $(this);
+                    var fff =$(this).parent().attr('value')
+                    console.log(fff);
+                      $.ajax({
+                        url:"__CONTROLLER__/delete",
+                        type: 'POST',
+                        dataType: 'json',
+                        data:{"id":fff},
+                        success:function(data){
+                          //  console.log(dangqian.parent());
+                            dangqian.parent().remove();
+                        }
+                    })
+                    //alert($(this).parent().attr('value'));
+                });
+            },function(){
+                $('.XXXX').hide();
+                 $('.guanlis').html('管理收藏');
+
+            })
+        })
+        </script>
+        </body>
+        </html>

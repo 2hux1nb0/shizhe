@@ -1,0 +1,242 @@
+<!--继承主页面-->
+<extend name='Index/index' />
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="renderer" content="webkit">
+        <!-- 保持原有CSS和title -->
+        <block name="title">
+            <title>
+                评论管理
+            </title>
+        </block>
+        <block name='css'>
+            <link href="__PUBLIC__/admin/css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+            <link href="__PUBLIC__/admin/font-awesome/css/font-awesome.css?v=4.3.0"
+            rel="stylesheet">
+            <link href="__PUBLIC__/admin/css/plugins/dataTables/dataTables.bootstrap.css"
+            rel="stylesheet">
+            <link href="__PUBLIC__/admin/css/plugins/iCheck/custom.css" rel="stylesheet">
+            <link href="__PUBLIC__/admin/css/animate.css" rel="stylesheet">
+            <link href="__PUBLIC__/admin/css/fenye.css" rel="stylesheet">
+            <link href="__PUBLIC__/admin/css/style.css?v=2.2.0" rel="stylesheet">
+            <link href="__PUBLIC__/admin/css/plugins/summernote/summernote.css" rel="stylesheet">
+            <link href="__PUBLIC__/admin/css/plugins/summernote/summernote-bs3.css"
+            rel="stylesheet">
+            <script src="__PUBLIC__/admin/js/jquery-1.8.3.min.js">
+            </script>
+        </block>
+        <block name='mybody'>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>
+                        管理评论
+                    </h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">
+                                主页
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                管理评论
+                            </a>
+                        </li>
+                        <li>
+                            <strong>
+                                评论列表
+                            </strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>
+                                评论列表
+                            </h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up">
+                                        隐藏
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline"
+                            role="grid">
+                                <form action="__URL__/index" method="get">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="dataTables_length" id="editable_length">
+                                                <label>
+                                                    每页
+                                                    <select name="num" aria-controls="editable" class="form-control input-sm">
+                                                        <option value="10">
+                                                            10
+                                                        </option>
+                                                        <option value="25">
+                                                            25
+                                                        </option>
+                                                        <option value="50">
+                                                            50
+                                                        </option>
+                                                        <option value="100">
+                                                            100
+                                                        </option>
+                                                    </select>
+                                                    条记录
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div id="editable_filter" class="dataTables_filter">
+                                                <label>
+                                                    <input type="search" id="keyword" name="keyword" onfocus="clearTip()" onblur="setTip()"class="form-control input-sm" aria-controls="editable">
+                                                    <button type="submit" class="btn btn-primary" data-target="#myModal">
+                                                        查找
+                                                    </button>
+                                                </label>
+                                            </div>
+                                            <script type="text/javascript">
+                                                var tipText = "用户名/资源名/留言内容";
+                                                document.getElementById("keyword").value = tipText;
+                                                function clearTip(){
+                                                      var keyword = document.getElementById("keyword");                
+                                                      if(keyword.value == tipText){
+                                                            keyword.value = "";
+                                                       }
+                                                }
+                                                function setTip(){
+                                                      var keyword = document.getElementById("keyword");
+                                                      if(keyword.value == ""){
+                                                            keyword.value = tipText;
+                                                      }
+                                                }
+                                                </script>
+                                        </div>
+                                    </div>
+                                </form>
+                                <table class="table table-striped table-bordered table-hover dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align:center;">
+                                                id
+                                            </th>
+                                            <th style="text-align:center;">
+                                                用户名
+                                            </th>
+                                            <th style="text-align:center;">
+                                                资源名
+                                            </th>
+                                            <th style="text-align:center;">
+                                                留言内容
+                                            </th>
+                                            <th style="text-align:center;">
+                                                留言时间
+                                            </th>
+                                            <!-- <th style="text-align:center;">留言支持数</th> -->
+                                            <th style="text-align:center;">
+                                                操作
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <foreach name="replys" item="vo" key='k'>
+                                            <tr class="gradeX">
+                                                <td style="text-align:center;line-height:700%;width:100px;">
+                                                    {$vo.iid}
+                                                </td>
+                                                <td style="text-align:center;line-height:700%;width:50px;">
+                                                    <li style="list-style:none;overflow:hidden;width:50px;white-space:nowrap;text-overflow:clip; ">
+                                                        {$vo.username}
+                                                    </li>
+                                                </td>
+                                                <td style="text-align:center;line-height:700%;width:100px;">
+                                                    <li style="list-style:none;overflow:hidden;width:100px;white-space:nowrap;text-overflow:clip; ">
+                                                        {$vo.title}
+                                                    </li>
+                                                </td>
+                                                <td style="text-align:center;line-height:700%;width:100px;">
+                                                    <li style="list-style:none;overflow:hidden;width:100px;white-space:nowrap;text-overflow:clip; ">
+                                                        {$vo.con}
+                                                    </li>
+                                                </td>
+                                                <td style="text-align:center;line-height:700%;width:300px;">
+                                                    {$vo.date|getCtime}
+                                                </td>
+                                                <td class="project-actions" style="text-align:center;line-height:700%;width:200px;">
+                                                     <a href="__URL__/edit/id/{$vo.iid}" class="btn btn-primary">
+                                                        查看
+                                                    </a>
+                                                    <a href="__URL__/delete/id/{$vo.iid}" class="btn btn-primary">
+                                                        删除
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </foreach>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th style="text-align:center;">
+                                                id
+                                            </th>
+                                            <th style="text-align:center;">
+                                                用户名
+                                            </th>
+                                            <th style="text-align:center;">
+                                                资源名
+                                            </th>
+                                            <th style="text-align:center;">
+                                                留言内容
+                                            </th>
+                                            <th style="text-align:center;">
+                                                留言时间
+                                            </th>
+                                            <th style="text-align:center;">
+                                                操作
+                                            </th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <span>
+                                    {$pages}
+                                </span>
+        </block>
+        <block name='js'>
+            <!-- Mainly scripts -->
+            <script src="__PUBLIC__/admin/js/jquery-2.1.1.min.js">
+            </script>
+            <script src="__PUBLIC__/admin/js/bootstrap.min.js?v=3.4.0">
+            </script>
+            <script src="__PUBLIC__/admin/js/plugins/metisMenu/jquery.metisMenu.js">
+            </script>
+            <script src="__PUBLIC__/admin/js/plugins/slimscroll/jquery.slimscroll.min.js">
+            </script>
+            <!-- Peity -->
+            <script src="__PUBLIC__/admin/js/plugins/peity/jquery.peity.min.js">
+            </script>
+            <!-- Custom and plugin javascript -->
+            <script src="__PUBLIC__/admin/js/hplus.js?v=2.2.0">
+            </script>
+            <script src="__PUBLIC__/admin/js/plugins/pace/pace.min.js">
+            </script>
+            <!-- iCheck -->
+            <script src="__PUBLIC__/admin/js/plugins/iCheck/icheck.min.js">
+            </script>
+            <!-- Peity -->
+            <script src="__PUBLIC__/admin/js/demo/peity-demo.js">
+            </script>
+        </block>
+        </body>
+
+</html>

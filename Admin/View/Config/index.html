@@ -1,0 +1,95 @@
+<extend name='Index/index' />
+<block name='css'>
+            <link href="__PUBLIC__/admin/css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+            <link href="__PUBLIC__/admin/font-awesome/css/font-awesome.css?v=4.3.0"
+            rel="stylesheet">
+            <!-- Morris -->
+            <link href="__PUBLIC__/admin/css/plugins/morris/morris-0.4.3.min.css"
+            rel="stylesheet">
+            <!-- Gritter -->
+            <link href="__PUBLIC__/admin/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+            <link href="__PUBLIC__/admin/css/animate.css" rel="stylesheet">
+            <link href="__PUBLIC__/admin/css/style.css?v=2.2.0" rel="stylesheet">
+            <script src="__PUBLIC__/ckeditor/ckeditor.js"></script>
+        
+            <script type="text/javascript" src="__PUBLIC__/xheditor/xheditor-1.2.2/jquery/jquery-1.4.4.min.js"></script>
+            <script type="text/javascript" src="__PUBLIC__/xheditor/xheditor-1.2.2/xheditor-1.2.2.min.js"></script>
+            <script type="text/javascript" src="__PUBLIC__/xheditor/xheditor-1.2.2/xheditor_lang/zh-cn.js"></script>
+        </block>
+        <block name='mybody'>
+         
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-lg-12">                     
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>网站配置</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <form method="post" action='__URL__/updateConfig' class="form-horizontal" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                    <label class="col-sm-2 control-label">网站标题</label>
+                                      <div class="col-sm-7">
+                                     <input type="text" name="title" class="form-control" value="{$webInfo['title']}">
+                                      </div>
+                                      </div>
+                                     
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">网站关键字</label>
+                                        <div class="col-sm-7">
+                                         <input type="text" name="keywords" class="form-control" value="{$webInfo['keywords']}">
+                                    </div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">网站描述</label>
+                                        <div class="col-sm-7">                                          
+                                           <textarea id="elm2" name='description' class="xheditor-mfull" rows="12" cols="80" style="width: 100%">{$webInfo['description']}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">网站版权</label>
+                                        <div class="col-sm-7">
+                                         <textarea id="elm2" name='copyright' class="xheditor-mfull" rows="12" cols="80" style="width: 100%"> <?php echo htmlspecialchars($webInfo['copyright'])?></textarea>
+                                        </div>
+                                    </div>
+                                  <!--   <div class="form-group">
+                                        <label class="col-sm-2 control-label">状态</label>
+                                        <div class="col-sm-10">
+                                            <label class="radio-inline">
+                                            <input type="radio" value="0" id="optionsRadios2" name="status" <if condition="$webInfo['status'] == '0' ">checked="checked"</if>>启用</label>
+                                             <label class="radio-inline">
+                                                <input type="radio" value="1" id="optionsRadios1" name="stutas" <if condition="$webInfo['status'] == '1' ">checked="checked"</if>>
+                                            禁用</label> 
+                                        </div>
+                                    </div> -->
+									<div class="form-group">
+				                        <label class="col-sm-2 control-label">网站状态</label>
+				                        <div class="col-sm-10">
+				                            <ul class="mws-form-list inline" >
+				                            	<li style="list-style-type:none;float:left;width:70px;"><label class="radio-inline"><input type="radio" value="1" name="status" <if condition="$webInfo['status'] == '1' ">checked="checked"</if>>开启</label></li>
+				                                <li style="list-style-type:none;float:left;width:70px;"><label class="radio-inline"><input type="radio" value="0" name="status" <if condition="$webInfo['status'] == '0' ">checked="checked"</if> >关闭</label></li>
+				                            </ul>
+				                        </div>
+				                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group">
+                                     <input type="hidden" class="btn btn-danger" name="id" value="1">
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                            <button type="submit" class="btn btn-primary">更新</button>  
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   </block>

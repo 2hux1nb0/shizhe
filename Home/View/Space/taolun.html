@@ -1,0 +1,819 @@
+<extend name="index" />
+<block name="head">
+            <include file="head" />
+            <style type="text/css"> 
+                .YK-nav li.taolun a{border-bottom:3px solid #3399e0;_padding-top:22px;_position:relative;_top:3px; }
+            </style>
+        </block>
+<block name="partnav">
+                                <div id="partnav"><div class="YK-nav">
+    <ul>
+        <li class="current"><a href="__URL__/index.html">主页</a></li>
+                                                            <li>
+                        <a href="__URL__/zhuanji.html" id="nav_playlist">专辑</a>
+                    </li>
+                                                            <li class="taolun">
+                        <a href="__URL__/taolun.html" id="nav_guestbook">讨论区</a>
+                    </li>
+                                                            <li>
+                        <a href="__URL__/shipin.html" id="nav_video">视频</a>
+                    </li>
+                <!--   <li class="current"> -->
+                         
+        <li>
+            <div class="clear"></div>
+            <div class="setting" id="nav_handle" style="display:none">
+                <div class="handle"><a href="javascript:;"></a></div>
+                <div class="edit" style="display:none">
+                    <ul>
+                        <li><a href="javascript:;" _for="edit_nav">编辑模块</a></li>
+                        <li><a href="javascript:;" _for="hide_nav">隐藏导航</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+         
+    </ul>
+    <div class="clear"></div>
+    <div class="YK-search">
+        <div class="searchinput">
+                <input type="text" maxlength="50" style="font-family:Microsoft YaHei,微软雅黑,helvetica,arial,verdana,tahoma,sans-serif;" id="searchinput" value="搜索视频" class="form_input form_input_s form_input_defaultvalue">
+                <button class="search-btn"></button>
+        </div>
+    </div>
+</div>
+</div>
+                            </block>
+<block name="YK-content">
+    <div class="YK-content">
+        <!-- main beigin -->
+        <div class="YK-main">
+            <div class="YK-discuss" _uc="ms">
+                <div class="YK_talk" id="YK_talk_main">
+                    <div class="editor">
+                        <textarea class="form_input" style="height: 60px; overflow: hidden;">
+                        </textarea>
+                        <div style="font-size: 14px; line-height: 24px; padding: 5px; border-width: 1px; border-style: solid; overflow: hidden; position: absolute; visibility: hidden; z-index: -1;">
+                        </div>
+                    </div>
+                    <div class="YK_toolbar">
+                        <div class="tool">
+                            
+                            <!--emoticon end-->
+                        </div>
+                        <div class="tool">
+                            <div class="insert_share" id="connect_div">
+                            </div>
+                            <!--share end-->
+                        </div>
+                        <div class="action">
+                            <a req="/u/UNDI0NjI3OTk2/guestbook/fun_message" act="composer.publish"
+                            href="javascript:void(0)" class="btn" style="color:#ffffff">
+                                发&nbsp;&nbsp;&nbsp;&nbsp;表
+                            </a>
+                            <span class="cancel">
+                                <a href="javascript:void(0)" class="btn btn-minor" style="display:none">
+                                    取&nbsp;&nbsp;&nbsp;&nbsp;消
+                                </a>
+                            </span>
+                        </div>
+                        <div class="counter">
+                            0/300
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <div class="YK-separation">
+                </div>
+                <div class="YK-box">
+                    <div class="hd">
+                        <div class="clear">
+                        </div>
+                    </div>
+                    <div class="bd">
+                        <!-- discuss begin -->
+                        <div class="YK-stream">
+                            <div class="streams">
+                                <div class="stream" data="%22sid%22%3A69023444%2C%22uid%22%3A65433311"
+                                id="">
+                                    <div class="avatar">
+                                        <a class="YK_id" cardplace="tb" encode_uid="UMjYxNzMzMjQ0" href="#"
+                                        target="_blank">
+                                            <img src="#" title="为爱所动的佛">
+                                        </a>
+                                    </div>
+                                    <div class="feed">
+                                        <div class="username">
+                                            <a class="YK_id" href="#" target="_blank">
+                                                为爱所动的佛
+                                            </a>
+                                            :
+                                        </div>
+                                        <div class="txt" style="word-wrap:break-word; overflow:hidden;">
+                                            <img src="#"
+                                            alt="赞" title="赞">
+                                        </div>
+                                        <div class="panel">
+                                            <span class="timestamp" title="2015-08-05 10:35:26">
+                                                昨天 10:35&nbsp;&nbsp;
+                                            </span>
+                                            <span class="actions">
+                                                <!-- 置顶按钮 start -->
+                                                <span class="share" style="display: none;" _value="sharespan" id="">
+                                                </span>
+                                                <span class="splite" style="display: none;" _value="sharesplite">
+                                                    |
+                                                </span>
+                                                <!-- 置顶按钮 end -->
+                                                <span class="com">
+                                                    <a href="javascript:;" _gbclick="reply">
+                                                        回复
+                                                    </a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </div>
+                                <div class="YK-separation">
+                                </div>
+                                <div class="stream" data="%22sid%22%3A68915460%2C%22uid%22%3A35202704">
+                                    <div class="avatar">
+                                        <a class="YK_id" cardplace="tb" encode_uid="UMTQwODEwODE2" href="#"
+                                        target="_blank">
+                                            <img src="#" title="因为我所以喜欢">
+                                        </a>
+                                    </div>
+                                    <div class="feed">
+                                        <div class="username">
+                                            <a class="YK_id" href="#" target="_blank">
+                                                因为我所以喜欢
+                                            </a>
+                                            :
+                                        </div>
+                                        <div class="txt" style="word-wrap:break-word; overflow:hidden;">
+                                            <img src="#"
+                                            alt="强" title="强">
+                                        </div>
+                                        <div class="panel">
+                                            <span class="timestamp" title="2015-07-28 14:49:47">
+                                                07-28 14:49&nbsp;&nbsp;
+                                            </span>
+                                            <span class="actions">
+                                                <!-- 置顶按钮 start -->
+                                                <span class="share" style="display:none" _value="sharespan">
+                                                </span>
+                                                <span class="splite" style="display:none" _value="sharesplite">
+                                                    |
+                                                </span>
+                                                <!-- 置顶按钮 end -->
+                                                <span class="com">
+                                                    <a href="javascript:;" _gbclick="reply">
+                                                        回复
+                                                    </a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </div>
+                                <div class="YK-separation">
+                                </div>
+                                <div class="stream" data="%22sid%22%3A62661616%2C%22uid%22%3A345534218">
+                                    <div class="avatar">
+                                        <a class="YK_id" cardplace="tb" encode_uid="UMTM4MjEzNjg3Mg==" href="#"
+                                        target="_blank">
+                                            <img src="#" title="lsj010841136">
+                                        </a>
+                                    </div>
+                                    <div class="feed">
+                                        <div class="username">
+                                            <a class="YK_id" href="#" target="_blank">
+                                                lsj010841136
+                                            </a>
+                                            :
+                                        </div>
+                                        <div class="txt" style="word-wrap:break-word; overflow:hidden;">
+                                            你好 我安装ansys14.0的时候遇到了点问题
+                                        </div>
+                                        <div class="panel">
+                                            <span class="timestamp" title="2014-01-16 09:12:02">
+                                                2014-01-16&nbsp;&nbsp;
+                                            </span>
+                                            <span class="actions">
+                                                <!-- 置顶按钮 start -->
+                                                <span class="share" style="display:none" _value="sharespan">
+                                                </span>
+                                                <span class="splite" style="display:none" _value="sharesplite">
+                                                    |
+                                                </span>
+                                                <!-- 置顶按钮 end -->
+                                                <span class="com">
+                                                    <a href="javascript:;" _gbclick="reply">
+                                                        回复
+                                                    </a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </div>
+                                <div class="YK-separation">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- discuss end -->
+                        <!-- pager begin -->
+                        <div class="YK-pager">
+                            <ul class="YK-pages">
+                                <li class="current">
+                                    <span>
+                                        1
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- pager end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main end -->
+        <!-- aside begin -->
+        <div class="YK-aside">
+            <div id="asidefriends_wrap">
+                <div id="asidefriends">
+                    <div class="YK-box">
+                        <div class="hd">
+                            <div class="title">
+                                粉丝
+                                <span class="append">
+                                    (
+                                    <a href="/u/UNDI0NjI3OTk2/followers">
+                                        85
+                                    </a>
+                                    )
+                                </span>
+                            </div>
+                            <div class="setting" style="display:none">
+                                <div class="setup">
+                                    <span class="toleft">
+                                        <a href="javascript:;">
+                                        </a>
+                                    </span>
+                                    <span class="toright">
+                                        <a href="javascript:;">
+                                        </a>
+                                    </span>
+                                    <span class="up">
+                                        <a href="javascript:;">
+                                        </a>
+                                    </span>
+                                    <span class="down">
+                                        <a href="javascript:;">
+                                        </a>
+                                    </span>
+                                </div>
+                                <div class="handle">
+                                    <a href="javascript:;">
+                                    </a>
+                                </div>
+                                <div class="edit">
+                                    <ul>
+                                        <li _for="hide">
+                                            <a href="javascript:;">
+                                                隐藏模块
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bd">
+                            <div class="YK-userlist">
+                                <ul class="userlist">
+                                    <li>
+                                        <div class="item" _value="item">
+                                            <div class="avatar">
+                                                <img src="#" title="为爱所动的佛">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UMjYxNzMzMjQ0" href="#"
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="#" target="_blank" title="为爱所动的佛">
+                                                        为爱所动的佛
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item" _value="item">
+                                            <div class="avatar">
+                                                <img src="#" title="因为我所以喜欢">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UMTQwODEwODE2" href="#"
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="#" target="_blank" title="因为我所以喜欢">
+                                                        因为我所以喜欢
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item" _value="item">
+                                            <div class="avatar">
+                                                <img src="#" title="东方鸣镝">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UMzE0ODU0MDQwMA==" href="#"
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="#" target="_blank" title="东方鸣镝">
+                                                        东方鸣镝
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item" _value="item">
+                                            <div class="avatar">
+                                                <img src="#" title="小子哈哈哈哈哈">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UMTczNDMxMzI0" href="#"
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="#" target="_blank" title="小子哈哈哈哈哈">
+                                                        小子哈哈哈哈哈
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item" _value="item">
+                                            <div class="avatar">
+                                                <img src="#" title="梦之蓝79051448">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UMjg4MDI1ODEyOA==" href="#"
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="#" target="_blank" title="梦之蓝79051448">
+                                                        梦之蓝79051448
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item" _value="item">
+                                            <div class="avatar">
+                                                <img src="#"
+                                                title="一顶就破">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UNDA4ODE0ODg=" href="#"
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="#" target="_blank" title="一顶就破">
+                                                        一顶就破
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item" _value="item">
+                                            <div class="avatar">
+                                                <img src="#" title="上帝放弃">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UMTMxNDE0MzM0MA==" href="#"
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="#" target="_blank" title="上帝放弃">
+                                                        上帝放弃
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item" _value="item">
+                                            <div class="avatar">
+                                                <img src="#" title="喝茶的猪">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UNzc4OTcyNjQ=" href="#"
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="#" target="_blank" title="喝茶的猪">
+                                                        喝茶的猪
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item" _value="item">
+                                            <div class="avatar">
+                                                <img src="#" title="liuyangwangzhirong">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UNDg1NzMyOTAw" href="#"
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="#" target="_blank" title="liuyangwangzhirong">
+                                                        liuyangwangzhi
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="asidevistors_wrap">
+                <div id="asidevistors">
+                    <div class="YK-box">
+                        <div class="hd">
+                            <div class="title">
+                                访客
+                            </div>
+                            <div class="setting" style="display:none">
+                                <div class="setup">
+                                    <span class="toleft">
+                                        <a href="javascript:;">
+                                        </a>
+                                    </span>
+                                    <span class="toright">
+                                        <a href="javascript:;">
+                                        </a>
+                                    </span>
+                                    <span class="up">
+                                        <a href="javascript:;">
+                                        </a>
+                                    </span>
+                                    <span class="down">
+                                        <a href="javascript:;">
+                                        </a>
+                                    </span>
+                                </div>
+                                <div class="handle">
+                                    <a href="javascript:;">
+                                    </a>
+                                </div>
+                                <div class="edit">
+                                    <ul>
+                                        <li _for="hide">
+                                            <a href="javascript:;">
+                                                隐藏模块
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bd">
+                            <div class="YK-userlist">
+                                <ul class="userlist">
+                                    <li>
+                                        <div class="item">
+                                            <div class="avatar">
+                                                <img src="#" title="为爱所动的佛">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UMjYxNzMzMjQ0" href="#"
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="#" target="_blank" title="为爱所动的佛">
+                                                        为爱所动的佛
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                        <div class="date">
+                                            昨天 10:35
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item">
+                                            <div class="avatar">
+                                                <img src="" title="Coward61501750">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UMzE0MDE5MjE1Mg==" href=""
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="" target="_blank" title="Coward61501750">
+                                                        Coward61501750
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                        <div class="date">
+                                            前天 18:55
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item">
+                                            <div class="avatar">
+                                                <img src="" title="师者用户786638533">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UMzE0NjU1NDEzMg==" href=""
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="" target="_blank" title="师者用户786638533">
+                                                        师者用户786638
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                        <div class="date">
+                                            前天 18:12
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item">
+                                            <div class="avatar">
+                                                <img src="" title="周雪希">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UMzE2MDYyMzk1Mg==" href=""
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="" target="_blank" title="周雪希">
+                                                        周雪希
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                        <div class="date">
+                                            3天前
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item">
+                                            <div class="avatar">
+                                                <img src="" title="bszzsp">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UNDg2ODc1MDky" href=""
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="" target="_blank" title="bszzsp">
+                                                        bszzsp
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                        <div class="date">
+                                            3天前
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item">
+                                            <div class="avatar">
+                                                <img src="" title="heatonwj">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UOTk4NDQzNDg=" href=""
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="" target="_blank" title="heatonwj">
+                                                        heatonwj
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                        <div class="date">
+                                            3天前
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item">
+                                            <div class="avatar">
+                                                <img src="" title="师者用户_723781680">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UMjg5NTEyNjcyMA==" href=""
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="" target="_blank" title="师者用户_723781680">
+                                                        师者用户_72378
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                        <div class="date">
+                                            4天前
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item">
+                                            <div class="avatar">
+                                                <img src="" title="叶若天35981184">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UMzE1NjY4ODA5Mg==" href=""
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="" target="_blank" title="叶若天35981184">
+                                                        叶若天35981184
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                        <div class="date">
+                                            6天前
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item">
+                                            <div class="avatar">
+                                                <img src="" title="孟信林">
+                                            </div>
+                                            <div class="link">
+                                                <a class="YK_id" cardplace="lr" encode_uid="UMzE1NjYyOTEzNg==" href=""
+                                                target="_blank">
+                                                </a>
+                                            </div>
+                                            <div class="username">
+                                                <span class="name">
+                                                    <a href="" target="_blank" title="孟信林">
+                                                        孟信林
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="overlay">
+                                            </div>
+                                        </div>
+                                        <div class="date">
+                                            6天前
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- aside end -->
+        <div class="clear">
+        </div>
+        <!-- 隐藏浮层 -->
+        <div class="YK_talk" id="YK_talk" style="display:none">
+            <div class="editor">
+                <textarea class="form_input">
+                </textarea>
+            </div>
+            <div class="YK_toolbar">
+                <div class="tool">
+                    <div class="insert_emoticon">
+                        <div index="0" class="dropmenu">
+                            <div class="handle" act="composer.tools.emotion" req="/u/composer/t/emotion">
+                                <a href="javascript::void()" onclick="return false;" title="添加表情">
+                                    <span class="icon">
+                                        <em>
+                                            表情
+                                        </em>
+                                    </span>
+                                    表情
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--emoticon end-->
+                </div>
+                <div class="tool">
+                    <div class="insert_share" id="connect_div">
+                    </div>
+                    <!--share end-->
+                </div>
+                <div class="action">
+                    <a req="/u/UNDI0NjI3OTk2/guestbook/fun_message" act="composer.publish"
+                    href="javascript:void(0)" class="btn" style="color:#ffffff">
+                        发&nbsp;&nbsp;&nbsp;&nbsp;表
+                    </a>
+                    <span class="cancel">
+                        <a href="javascript:void(0)" class="btn btn-minor" style="display:none">
+                            取&nbsp;&nbsp;&nbsp;&nbsp;消
+                        </a>
+                    </span>
+                </div>
+                <div class="counter">
+                    0/300
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var to_user_id = 'UNDI0NjI3OTk2';
+            var to_user_name = '648462189';
+            var tab = 'message';
+            var nowtopnum = '0';
+        </script>
+    </div>
+</block>

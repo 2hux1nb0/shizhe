@@ -1,0 +1,249 @@
+<!--继承主页面-->
+<extend name='Index/index'/>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <!-- 保持原有CSS和title -->
+    <block name='title'><title>后台表格基础表格</title></block>
+    <block name='css'>
+        <link href="__PUBLIC__/admin/css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+        <link href="__PUBLIC__/admin/font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+        <link href="__PUBLIC__/admin/css/plugins/iCheck/custom.css" rel="stylesheet">
+        <link href="__PUBLIC__/admin/css/animate.css" rel="stylesheet">
+        <link href="__PUBLIC__/admin/css/fenye.css" rel="stylesheet">
+        <script src="__PUBLIC__/admin/js/jquery-1.8.3.min.js"></script>
+        <link href="__PUBLIC__/admin/css/style.css?v=2.2.0" rel="stylesheet">
+
+        <style type="text/css" media="screen">
+            #piccc {
+                width: 300px;
+                height: 200px;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function () {
+
+
+                $('.getId').click(function () {
+                    var idd =  $(this).val();
+                    $.ajax({
+                        url: "__CONTROLLER__/edit",
+                        dataType: 'json',
+                        data: {"id": idd},
+                        success: function (data) {
+                            $("#piccc").attr('src',data[0]['addres']);
+                            $("#idds").val(data[0]['id']);
+                            $("#classs").val(data[0]['type'])
+                        }
+                    });
+
+
+                })
+            })
+        </script>
+    </block>
+    <block name='mybody'>
+
+
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>轮播管理</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html">主页</a>
+                    </li>
+                    <li>
+                        <a>轮播管理</a>
+                    </li>
+                    <li>
+                        <strong>轮播管理</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>轮播管理</h5>
+
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="table_basic.html#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="table_basic.html#">选项1</a>
+                                </li>
+                                <li><a href="table_basic.html#">选项2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <form action="__URL__/index" method="get">
+                                <div class="col-sm-3 m-b-xs">
+                                    <select class="input-sm form-control input-s-sm inline" name="type">
+                                        <option value="0">分类选择</option>
+                                        <foreach name="cates" item="v">
+                                            <option value="{$v.id}">{$v.name}</option>
+                                        </foreach>
+
+                                    </select>
+
+
+                                </div>
+                                <div class="col-sm-3 m-b-xs">
+                                    <input type='submit' class="btn btn-primary btn-sm" value="查看">
+                            </form>
+                        </div>
+                        <div class="col-sm-2 m-b-xs">
+                        </div>
+                        <div class="col-sm-4">
+                            <!--<form action="__URL__/index" method="get">-->
+                                <!--<div class="input-group">-->
+                                    <!--<input type="text" placeholder="请输入关键词" name='keyword'-->
+                                           <!--class="input-sm form-control"> <span class="input-group-btn">-->
+                                            <!--<input type="submit" class="btn btn-sm btn-primary" value="搜索"/> </span>-->
+                                <!--</div>-->
+                            <!--</form>-->
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>类型</th>
+                                <th>资源名</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <foreach name='source' item='vo' key='k'>
+                                <tr>
+                                    <td id='sid'>{$vo.id}</td>
+                                    <td>{$vo.name}</td>
+                                    <td>{$vo.title}</td>
+                                    <td>{$vo[state] == 1  ?'正在展示':'已停止展示'}</td>
+                                    <td>
+                                        <button value="{$vo.id}" type="button" id='bianji'
+                                                class="getId btn btn-primary btn-xs " data-toggle="modal"
+                                                data-target="#myModal">编辑
+                                        </button>
+
+
+                                        &nbsp;&nbsp;<a href="__URL__/delete/id/{$vo.id}" title="">
+                                        <button class='btn btn-danger btn-xs bianji'>删除</button>
+                                    </a></td>
+                                </tr>
+
+                            </foreach>
+
+                            </tbody>
+
+                        </table>
+
+                            <span>
+                                {$pages}
+                            </span>
+
+
+                        <div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content animated bounceInRight">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span
+                                                aria-hidden="true">&times;</span><span class="sr-only">关闭</span>
+                                        </button>
+                                        <i class="fa modal-icon"><img src="1.png" alt="图片加载失败" id='piccc'/></i>
+                                        <h4 class="modal-title">主图</h4>
+                                        <small class="font-bold" id='titles'>资源名
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="post" action='__CONTROLLER__/edits' class="form-horizontal"
+                                              enctype="multipart/form-data">
+                                            <input id='idds' type="hidden" name="id">
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">类型</label>
+                                                <div class="col-sm-7">
+                                                    <select class="input-sm form-control input-s-sm inline" name="type"
+                                                            id="classs">
+                                                        <option value="0">分类选择</option>
+                                                        <foreach name="cates" item="v">
+                                                            <option value="{$v.id}">{$v.name}</option>
+                                                        </foreach>
+                                                        </select>
+                                                </div>
+                                            </div>
+                                            <!--<div class="form-group">-->
+                                                <!--<label class="col-sm-2 control-label">主图:</label>-->
+
+                                                <!--<div class="col-sm-7">-->
+                                                    <!--<input type="file" name="addres" class="form-control">-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">状态</label>
+                                                <div class="col-sm-7">
+                                                    <select class="form-control m-b" name="state" id='areas'>
+                                                        <option value="1">开启展示</option>
+                                                        <option value="0">停止展示</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-white" data-dismiss="modal">关闭
+                                                </button>
+                                                <input type="submit" class="btn btn-primary" value="保存">
+                                            </div>
+                                        </form>
+                                    </div>
+
+
+    </block>
+    <block name='footer'>
+
+    </block>
+
+
+    <block name='js'>
+
+        <!-- Mainly scripts -->
+        <script src="__PUBLIC__/admin/js/jquery-2.1.1.min.js"></script>
+
+        <script src="__PUBLIC__/admin/js/bootstrap.min.js?v=3.4.0"></script>
+        <script src="__PUBLIC__/admin/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        <script src="__PUBLIC__/admin/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+        <!-- Peity -->
+        <script src="__PUBLIC__/admin/js/plugins/peity/jquery.peity.min.js"></script>
+
+        <!-- Custom and plugin javascript -->
+        <script src="__PUBLIC__/admin/js/hplus.js?v=2.2.0"></script>
+        <script src="__PUBLIC__/admin/js/plugins/pace/pace.min.js"></script>
+
+        <!-- iCheck -->
+        <script src="__PUBLIC__/admin/js/plugins/iCheck/icheck.min.js"></script>
+
+        <!-- Peity -->
+        <script src="__PUBLIC__/admin/js/demo/peity-demo.js"></script>
+
+    </block>
+    </body>
+
+</html>

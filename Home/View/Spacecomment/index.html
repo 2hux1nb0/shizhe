@@ -1,0 +1,339 @@
+<extend name="Space/index" />
+<block name="head">
+    <link href="__PUBLIC__/Home/css/youku.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/Home/css/qheader.css" type="text/css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/css/chuda_qheader.css" type="text/css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/css/lsidetool.css" type="text/css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/css/yk.css" type="text/css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/css/space.css" type="text/css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/css/s_comm.css" type="text/css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/css/playV5.css" type="text/css" rel="stylesheet">
+
+    <script type="text/javascript" src='__PUBLIC__/Home/js/jquery-1.8.3.min.js'>
+    </script>
+    <script type="text/javascript" src='__PUBLIC__/Home/js/common.js'>
+    </script>
+    <script type="text/javascript" src='__PUBLIC__/Home/js/qwindow.js'>
+    </script>
+    <style type="text/css">
+        .comment a{border-bottom:3px solid #3399e0;_padding-top:22px;_position:relative;_top:3px;
+        } 
+        .yk-tab .current a { color: #fff; background: #06a7e1; } .action a{ background:
+        #06a7e1; }
+         .action span a { background: #06a; }
+        .commentArea .loginBefore textarea {
+            width: 625px;
+        }
+    </style>
+</block>
+<block name="partnav">
+    <div id="partnav">
+        <div class="YK-nav">
+            <ul>
+                <li class="current">
+                    <a href="__APP__/Home/Space/index/id/{$urs[0]['id']}">
+                        主页
+                    </a>
+                </li>
+                <li class="comment">
+                    <a href="__APP__/Home/Spacecomment/index/id/{$urs[0]['id']}" id="nav_guestbook">
+                        讨论区
+                    </a>
+                </li>
+                <li id="video_order_fa">
+                    <a href="__APP__/Home/Collect/index">
+                        我的收藏
+                    </a>
+                </li>
+                <li class="video">
+                    <a href="__APP__/Home/Spacevideo/index/id/{$urs[0]['id']}" id="nav_video">
+                        视频
+                    </a>
+                </li>
+                
+                <li>
+                    <div class="clear">
+                    </div>
+                </li>
+            </ul>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+</block>
+<block name="YK-content">
+    <div class="YK-content">
+        <!-- main beigin -->
+        <div class="YK-main">
+            <div class="commentArea" id="commentArea" >
+            <div id="commentAreaBox" exclude="1">
+                <span style="display:none" id="totalComment">
+                    156
+                </span>
+                <!--评论区 start-->
+                <a name="replyLocation" id="replyLocation">
+                </a>
+                <!--评论区 start-->
+                <div class="commentAction loginBefore" id="commentAction" style="display:block">
+                    <div class="userPhoto" style="display: none;">
+                        <a href="" target="_blank">
+                            <img title="qwer" src="/Youku/Public/Admin/UserPhoto/photo.jpg">
+                        </a>
+                    </div>
+                    <div class="loginArea" id="loginArea" style="display: none;">
+                        <span>
+                            <a href="">
+                                qwer                        </a>
+                        </span>
+                    </div>
+
+
+                    <div class="commentTextArea">
+                        <textarea class="form_input form_input_defaultvalue" id="content" name="con" onkeydown="ctlentComments(event,'bt_comment');">有什么感想，您也来说说吧！</textarea>
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div class="toolbar" id="toolbar">
+                        <div id='buttonS' class="action">
+                            <div class="form_btn form_btn_m form_btnsub_m">
+                                <span class="form_btn_text" id="bt_comment" name="bt_comment" onclick="javascript:sendcomment();">
+                                    发表评论
+                                </span>
+                            </div>
+                            <div class="com_overlay" id="com_overlay" style="display:none">
+                                <div class="com_overlay_con">
+                                    <div class="tips" id="tips">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear">
+                        </div>
+                        <div class="validate" id="verify_code" style="display:none;">
+                            验证码:
+                            <input type="text" class="defaultext" onkeydown="ctlentComments(event,'bt_comment');" name="verify_code_value" id="verify_code_value" value="输入右图的字符">
+                            <span>
+                                <img class="key" id="verify_code_img">
+                            </span>
+                            <span>
+                                看不清,
+                                <a onclick="verify_code_comment(true);return false;">
+                                    点此刷新
+                                </a>
+                            </span>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="musicOrz">
+            </div>
+            <div id="videocomment" class="videoComment">
+                <div class="tab_inner" id="tab_inner">
+                    <div class="tabs">
+                        <ul id="CommentTab">
+                            <li _to="allcomment" id="allcomment" class="current">
+                                <a>
+                                    全部评论
+
+                                </a>
+                            </li>
+                            <li _to="hotcomment" id="hotcomment" name="hotcomment" style="display:none">
+                                <a>
+                                    精华评论
+                                </a>
+                            </li>
+                            <li _to="ownercomment" id="ownercomment" name="ownercomment" style="display:none">
+                                <a>
+                                    上传者说
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="commentpop" id="comment_new" style="display:none">
+                    <a style="display:block;" charset="hz-4001208" href="javascript:location.reload();">
+                        有新评论，刷新看看
+                    </a>ss
+                </div>
+                <div class="commentpop" id="commentpop" style="display:none">
+                    <span onclick="this.parentNode.style.display='none';" class="close">
+                    </span>
+                    评论已提交，请等待审核通过。
+                </div>
+                <div id="videobodycommentlist">
+                    <if condition="$nocount eq 1">
+                    <div id="comment_none" class="null"> <h3>抢个沙发吧~</h3> </div>
+                    <else/>
+                    {$page}
+                    <div id="Comments" class="box nBox">
+                        <div class="body">
+                            <div class="comments">
+                            <foreach name='gues' item='vo'>
+
+                                <!--一条回复内容 begin-->
+                                <div class="comment" >
+                                    <div class="commentcon">
+                                        <div class="userPhoto">
+                                            <a href="{$vo['uid']}" target="_blank">
+                                                <img src="{$vo['photo']}">
+                                            </a>
+                                        </div>
+                                        <div class="bar  ">
+                                                {$vo['username']}                                    </div>
+                                        <div class="con">
+                                            <div class="text" >
+                                                <p>{$vo['con']}</p>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="handle" >
+                                                    <div class="com_reply" style="display:block">
+                                                        <a id="replylink" username="{$vo['username']}" href="javascript:void(0)" >
+                                                            回复
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <span class="timestamp">
+                                                    {$vo['date']}                                            </span>
+                                            </div>
+                                        </div>
+                                        <!--con end-->
+                                    </div>
+                                </div>
+                                <!--comment end-->
+                            </foreach>
+
+                            </div>
+                        </div>
+                        <!--body end-->
+
+                    </div>
+                    <div class='clear' style="padding-top:50px"></div>
+                    {$page}
+                    </if>
+                </div>
+                <script>
+                $('#replylink').click(function(){
+                    if(!islogin()){
+                            showLoginbox();
+                            return 0;
+                        }
+                        window.scroll(0,760);
+                        var cc = $(this).attr('username');
+
+                        $('#content').val('@'+cc+' : ');
+                        $('#content').focus();
+                    });
+
+
+                    function textareafocus(){
+                        if(!islogin()){
+                            showLoginbox();
+                            return 0;
+                        }
+                        window.scroll(0,760);
+                        $('#content').val('');
+                        $('#content').focus();
+                    }
+                </script>
+                <div class="returntop">
+                    <a href="javascript:void(0)" onclick="javascript:textareafocus();">
+                        发表评论
+                    </a>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--左侧底通广告位-->
+    <div>
+        <div id="ab_747">
+        </div>
+        <div id="ab_v_321">
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<script>
+
+    $('#content').click(function(){
+        $(this).val('');
+    });
+    function sendcomment(){
+        if(!islogin()){
+            showLoginbox();
+            return 0;
+        }
+        var mid = {$mid};
+        // alert(mid);return;
+        var content = $('#content').val();
+        if(content == '')
+            {return;}
+        $.get('__URL__/comment',{con:content,mid:mid},function(data){
+            $('#comment_new').show();
+        },'json');
+        return false;
+    }
+
+
+</script>
+    
+        </div>
+    
+
+
+
+        
+
+        
+        <!-- main end -->
+        <!-- aside begin -->
+        <div class="YK-aside">
+            <div id="asidefriends_wrap">
+                <div id="asidefriends">
+                    <div class="YK-box">
+                        <div class="hd">
+                            <div class="title">
+                                粉丝({$cou})
+                            </div>
+                        </div>
+                        <div class="bd">
+                            <div class="YK-userlist">
+                                <ul class="userlist">
+                                    <foreach name="fans" item="vo">
+                                        <li style="float:left;">
+                                            <div class="item" _value="item">
+                                                <div class="avatar">
+                                                    <img src="{$vo.photo}" title="{$vo.username]}">
+                                                </div>
+                                                <div class="link">
+                                                    <a class="YK_id" cardplace="lr" encode_uid="UMjYxNzMzMjQ0" href="__URL__/index/id/{$vo.id}"
+                                                    target="_blank">
+                                                    </a>
+                                                </div>
+                                                <div class="username">
+                                                    <span class="name">
+                                                        <a href="__APP__/Home/Space/index/id/{$vo.uid}" target="_blank" title="{$vo.title}">
+                                                            {$vo.username}
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                                <div class="overlay">
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </foreach>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- aside end -->
+        <div class="clear">
+        </div>
+    </div>
+</block>

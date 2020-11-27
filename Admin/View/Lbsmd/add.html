@@ -1,0 +1,124 @@
+<extend name='Index/index'/>
+  <block name='title'><title>基本表单</title></block>
+    <block name='css'>
+    <link href="__PUBLIC__/admin/css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+    <link href="__PUBLIC__/admin/font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/animate.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/style.css?v=2.2.0" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/dropzone/basic.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/dropzone/dropzone.css" rel="stylesheet">
+   <link href="__PUBLIC__/admin/css/plugins/steps/jquery.steps.css" rel="stylesheet">
+
+
+    </block>
+</head>
+
+<body>       
+        <block name='mybody'>
+         
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-lg-12">                     
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>主图添加<small>#</small></h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="form_basic.html#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="">选项1</a>
+                                        </li>
+                                        <li><a href="form_basic.html#">选项2</a>
+                                        </li>
+                                    </ul>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <form method="post" action='__CONTROLLER__/insert' class="form-horizontal" enctype="multipart/form-data">
+                                     <div class="form-group">
+                                        <label class="col-sm-2 control-label">类型</label>
+                                        <div class="col-sm-7">
+                                            <select class="input-sm form-control input-s-sm inline" name="type">
+                                                <option value="0">分类选择</option>
+                                                <foreach name="cates" item="v">
+                                                    <option value="{$v.id}">{$v.name}</option>
+                                                </foreach>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                    <label class="col-sm-2 control-label">上传大图:</label>
+                                      <div class="col-sm-7">
+                                     <input type="file" name="pic" class="form-control">
+                                     <input type="text" name="rid" hidden="hidden" value="{$_GET['id']}">
+                                      </div>
+                                      </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">类型</label>
+                                        <div class="col-sm-7">
+                                            <select class="input-sm form-control input-s-sm inline" name="state">
+                                                <option value="0">分类选择</option>
+                                                    <option value="1">立即使用</option>
+                                                    <option value="0">稍后使用</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group">
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                            <button class="btn btn-primary">完成</button>
+                                           
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    By：<a href="http://www.zi-han.net" target="_blank">zihan's blog</a>
+                </div>
+                <div>
+                    <strong>Copyright</strong> H+ &copy; 2014
+                </div>
+            </div>
+
+        </div>
+
+   </block>
+   <block name='js'>
+    <!-- DROPZONE -->
+
+    <script src="__PUBLIC__/admin/js/jquery-2.1.1.min.js"></script>
+    <script src="__PUBLIC__/admin/js/bootstrap.min.js?v=3.4.0"></script>
+    <script src="__PUBLIC__/admin/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="__PUBLIC__/admin/js/hplus.js?v=2.2.0"></script>
+    <script src="__PUBLIC__/admin/js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="__PUBLIC__/admin/js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+</block>
+</body>
+
+</html>

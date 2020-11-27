@@ -1,0 +1,36 @@
+<div style="overflow: hidden; position: relative; display: block;" id="upload-start">
+    <!--uploadTitle start-->
+    <div class="uploadTitle">
+        <h3>上传视频 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(注:师者目前支持上传mp4格式,WebM格式的视频文件,后续将支持其他格式视频文件上传)</h3>
+    </div><!--uploadTitle end-->
+
+    <!--mainCol start-->
+    <div class="mainCol">
+            <form action="{:U('Home/Upload/uploadVideo')}" method="post" enctype="multipart/form-data" >
+            <input type="file" name='vf' style="visibility:hidden; width:0px; height: 0px;" accept="">
+            <button type='submit' id='subV' style="display:none"></button>
+            </form>
+        <div class="uploadHot" >
+            <div class="uploadIcon"></div>
+            <div class="uploadBtn"></div>
+        </div>
+        <div class="upLayer" id="uploadLayer" style="display: none;"></div>
+        <div class="prepare_errortips">
+            <div style="display:none;padding-top:0px" class="error_prepare t_c upload-start-error">至少两个字母或汉字</div>
+        </div>
+        <div style="margin-bottom:10px;margin-top:5px;" class="t_c">
+            <p class="uploadF_12">上传视频，即表示您已同意<a target="_blank" href="{:U('Home/Registered/RA')}"><span>师者上传服务条款</span></a>，请勿上传色情，反动等违法视频</p>
+        </div>
+        <!-- 此处勿删 -->
+                    <!-- <div style="margin-bottom:10px;" class="t_c">
+                <p class="uploadF_12">会员绿色专用通道，尊享上传加速特权<a style="margin-left:10px" href="" target="_blank" class="redname">开通会员</a>
+        </p></div> -->
+                    <!-- <div class="uploadIntro">
+            <p><span class="f_12"><a target="_blank" href="">哪些视频是被禁止发布的</a></span>|<span class="f_12"><a target="_blank" href="">如何获得高清、超高清视频标识</a></span>|<span class="f_12"><a target="_blank" href="">上传原创视频获得分成</a></span></p>
+        </div> -->
+    </div>
+    <!--mainCol end-->
+
+    <div class="line_dot"></div>
+</div>
+

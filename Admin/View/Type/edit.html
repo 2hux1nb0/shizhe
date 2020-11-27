@@ -1,0 +1,29 @@
+<extend name='Index/index'/>
+     <block name='title' > <title>分类管理</title></block>
+      <meta charset="utf-8">
+  <block name='css'>
+            <link rel="stylesheet" href="__PUBLIC__/Admin/css/type/bootstrap.min.css" type="text/css">
+            <link href="__PUBLIC__/admin/css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+            <link href="__PUBLIC__/admin/font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+            <link href="__PUBLIC__/admin/css/plugins/iCheck/custom.css" rel="stylesheet">
+            <link href="__PUBLIC__/admin/css/animate.css" rel="stylesheet">
+            <link href="__PUBLIC__/admin/css/style.css?v=2.2.0" rel="stylesheet">
+</block>
+
+<body>
+        <block name='mybody'>
+            <center>
+            <h3>修改类别信息</h3>
+
+            	<form action="__URL__/update" method="POST">
+                                 <input type="hidden" name="id" value="{$model.id}">
+                                 <p>父  ID: <input type="text" name="lesson" value="{$model.pid}"  readonly="readonly"></p>
+                                <p>路  径: <input type="text" name="score" value="{$model.path}"  readonly="readonly"></p>
+                                <p>类  名:<input type="text" name="name" value="{$model.name}" ></p>
+            	       <p> <button class="btn btn-success" type="submit">修改</button>
+                                     <button class="btn btn-danger" type="reset">重置</button>
+
+            	</form>
+        </block>     
+ </body>
+

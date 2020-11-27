@@ -1,0 +1,178 @@
+<extend name="Space/index" />
+<block name="head">
+    <link href="__PUBLIC__/Home/css/youku.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/Home/css/qheader.css" type="text/css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/css/chuda_qheader.css" type="text/css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/css/lsidetool.css" type="text/css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/css/yk.css" type="text/css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/css/space.css" type="text/css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/css/s_comm.css" type="text/css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/css/s_video.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src='__PUBLIC__/Home/js/jquery-1.8.3.min.js'>
+    </script>
+    <script type="text/javascript" src='__PUBLIC__/Home/js/common.js'>
+    </script>
+    <script type="text/javascript" src='__PUBLIC__/Home/js/qwindow.js'>
+    </script>
+    <style type="text/css">
+        .video a{border-bottom:3px solid #3399e0;_padding-top:22px;_position:relative;_top:3px;
+        } .yk-tab #video_order_vv a { color: #fff; background: #06a7e1; } .tabCont{
+        width: 860px; border:1px solid #fff; } .v-link{ float:left; }
+    </style>
+</block>
+<block name="partnav">
+    <div id="partnav">
+        <div class="YK-nav">
+            <ul>
+                <li class="current">
+                    <a href="__APP__/Home/Space/indexid/{$urs[0]['id']}">
+                        主页
+                    </a>
+                </li>
+                <li>
+                    <a href="__APP__/Home/Spacecomment/index/id/{$urs[0]['id']}" id="nav_guestbook">
+                        讨论区
+                    </a>
+                </li>
+                <li id="video_order_fa">
+                    <a href="__APP__/Home/Collect/index">
+                        我的收藏
+                    </a>
+                </li>
+                <li class="video">
+                    <a href="__APP__/Home/Spacevideo/index/id/{$urs[0]['id']}" id="nav_video">
+                        视频
+                    </a>
+                </li>
+
+                <!-- <li class="current"> -->
+                <li>
+                    <div class="clear">
+                    </div>
+                    <div class="setting" id="nav_handle" style="display:none">
+                        <div class="handle">
+                            <a href="javascript:;">
+                            </a>
+                        </div>
+                        <div class="edit" style="display:none">
+                            <ul>
+                                <li>
+                                    <a href="javascript:;" _for="edit_nav">
+                                        编辑模块
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" _for="hide_nav">
+                                        隐藏导航
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+</block>
+<block name="YK-content">
+    <div class="YK-content">
+        <div class="YK-video">
+            <div class="YK-box" id="box">
+                <!-- <div class="hd"> -->
+                <div class="title eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                    视频
+                    <span class="append eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                        共{$count}个视频
+                    </span>
+                </div>
+                <!-- </div> -->
+                <div class="clear">
+                </div>
+                <div class="bd">
+                    <ul class="yk-tab" id="video_order_ul">
+                        <li id="video_order_ct" class="current active tabIn">
+                            <a href="__APP__/Home/Spacevideo/index/id/{$urs[0]['id']}">
+                                最新发布
+                            </a>
+                        </li>
+                        <li id="video_order_vv">
+                            <a href="__URL__/video_play/id/{$urs[0]['id']}">
+                                最多播放
+                            </a>
+                        </li>
+                        <li id="video_order_cm">
+                            <a href="__URL__/video_com/id/{$urs[0]['id']}">
+                                最多评论
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear">
+                </div>
+                <!-- custom begin -->
+                <div class="video-list" id="home_update_content">
+                    <!--吊用共用模版-->
+                    <div class="box  tabCont">
+                        <div class="yk-row">
+                            <foreach name="play" item="v">
+                                <div class="yk-col4" c_time="2015-07-30 00:15:26">
+                                    <div class="v" id="">
+                                        <div class="v-thumb">
+                                            <img src="{$v.pic}" replace="false">
+                                        </div>
+                                        <div class="v-link">
+                                            <a title="{$v.title}" target="video" href="{:U('Home/Play/index')}?videoId={$v.id}"
+                                            class="eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                            </a>
+                                        </div>
+                                        <div class="v-meta va eye-protector-processed">
+                                            <div class="v-meta-title">
+                                                <a _hz="l_v_title" title="{$v.title}" target="video" href="">
+                                                    {$v.title}
+                                                </a>
+                                            </div>
+                                            <div class="v-meta-entry eye-protector-processed">
+                                                <i title="播放" class="ico-statplay eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                                </i>
+                                                <span class="v-num eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                                    {$v.count}
+                                                </span>
+                                                <span class="v-upload-date eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                                    {$v.time|getCtime}
+                                                </span>
+                                            </div>
+                                            <div class="v-meta-overlay">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </foreach>
+                        </div>
+                    </div>
+                </div>
+                <div id="home_update_loading" style="display:none;" class="YK-loading">
+                    <div class="loading loading-32">
+                    </div>
+                </div>
+                <div name="'v_page':'1','last_str':'','top_total':'0','page_order':'1','ajax_url':'/u/UNDI0NjI3OTk2/videos/','scroll_able':'0'"
+                style="display:none;" id="params">
+                </div>
+                <div id="page_num" name="1" style="display:none;">
+                </div>
+                <div class="clear">
+                </div>
+                <!-- custom end -->
+                <!-- pager begin -->
+                <div class="sk_pager">
+                    <ul>
+                        <li>
+                            {$page}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>

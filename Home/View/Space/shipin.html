@@ -1,0 +1,305 @@
+<extend name="Space/index" />
+<block name="head">
+    <style type="text/css">
+        .YK-nav li.shipin a{border-bottom:3px solid #3399e0;_padding-top:22px;_position:relative;_top:3px;
+        }
+        .yk-tab .current a {
+            color: #fff;
+            background: #06a7e1;
+        }
+    </style>
+</block>
+<block name="partnav">
+    <div id="partnav">
+        <div class="YK-nav">
+            <ul>
+                <li class="current">
+                    <a href="__URL__/index.html">
+                        主页
+                    </a>
+                </li>
+                <li>
+                    <a href="__URL__/zhuanji.html" id="nav_playlist">
+                        专辑
+                    </a>
+                </li>
+                <li>
+                    <a href="__URL__/taolun.html" id="nav_guestbook">
+                        讨论区
+                    </a>
+                </li>
+                <li class="shipin">
+                    <a href="__URL__/shipin.html" id="nav_video">
+                        视频
+                    </a>
+                </li>
+                <!-- <li class="current"> -->
+                <li>
+                    <div class="clear">
+                    </div>
+                    <div class="setting" id="nav_handle" style="display:none">
+                        <div class="handle">
+                            <a href="javascript:;">
+                            </a>
+                        </div>
+                        <div class="edit" style="display:none">
+                            <ul>
+                                <li>
+                                    <a href="javascript:;" _for="edit_nav">
+                                        编辑模块
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" _for="hide_nav">
+                                        隐藏导航
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clear">
+            </div>
+            <div class="YK-search">
+                <div class="searchinput">
+                    <input type="text" maxlength="50" style="font-family:Microsoft YaHei,微软雅黑,helvetica,arial,verdana,tahoma,sans-serif;"
+                    id="searchinput" value="搜索视频" class="form_input form_input_s form_input_defaultvalue">
+                    <button class="search-btn">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="YK-content">
+    <div class="YK-content">
+        <div class="YK-video">
+            <div class="YK-box" id="box">
+                <!-- <div class="hd"> -->
+                <div class="title eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                    视频
+                    <span class="append eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                        共29个视频
+                    </span>
+                </div>
+                <!-- </div> -->
+                <div class="clear">
+                </div>
+                <div class="bd">
+                    <ul class="yk-tab" id="video_order_ul">
+                        <li id="video_order_ct" class="current active tabIn">
+                            <a href="__URL__/shipin.html">
+                                最新发布
+                            </a>
+                        </li>
+                        <li id="video_order_vv">
+                            <a href="__URL__/video_play.html">
+                                最多播放
+                            </a>
+                        </li>
+                        <li id="video_order_cm">
+                            <a href="__URL__/video_comment.html">
+                                最多评论
+                            </a>
+                        </li>
+                        <li id="video_order_fa">
+                            <a href="__URL__/video_collect.html">
+                                最多收藏
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear">
+                </div>
+                <!-- custom begin -->
+                <div class="video-list" id="home_update_content">
+                    <!--吊用共用模版-->
+                    <div class="box  tabCont">
+                        <div class="yk-row">
+                            <div class="yk-col4" c_time="2015-07-30 00:15:26">
+                                <div class="v" id="">
+                                    <div class="v-thumb">
+                                        <img src="#" replace="false"
+                                        alt="tyui" title="tyui">
+                                        <div class="v-thumb-tagrb">
+                                            <span class="v-time">
+                                                03:32
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="v-link">
+                                        <a title="tyui" target="video" href="#"
+                                        class="eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                        </a>
+                                    </div>
+                                    <div class="v-meta va eye-protector-processed" style="transition: background 0.3s ease; background-color: rgb(193, 230, 198);">
+                                        <div class="v-meta-title">
+                                            <a _hz="l_v_title" title="tyui" target="video" href="#">
+                                                tyui
+                                            </a>
+                                        </div>
+                                        <div class="v-meta-entry eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                            <i title="播放" class="ico-statplay eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                            </i>
+                                            <span class="v-num eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                                4
+                                            </span>
+                                            <span class="v-upload-date eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                                07-30 00:15
+                                            </span>
+                                        </div>
+                                        <div class="v-meta-overlay">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="yk-col4" c_time="2014-05-02 10:20:10">
+                                <div class="v">
+                                    <div class="v-thumb">
+                                        <img src="#" replace="false"
+                                        alt="第18课 单元及网格划分的大概过程" title="第18课 单元及网格划分的大概过程">
+                                        <div class="v-thumb-tagrb">
+                                            <span class="v-time">
+                                                06:01
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="v-link">
+                                        <a title="第18课 单元及网格划分的大概过程" target="video" href="#"
+                                        class="eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                        </a>
+                                    </div>
+                                    <div class="v-meta va eye-protector-processed" style="transition: background 0.3s ease; background-color: rgb(193, 230, 198);">
+                                        <div class="v-meta-title">
+                                            <a _hz="l_v_title" title="第18课 单元及网格划分的大概过程" target="video" href="#">
+                                                第18课 单元及网格划分的大概过程
+                                            </a>
+                                        </div>
+                                        <div class="v-meta-entry eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                            <i title="播放" class="ico-statplay eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                            </i>
+                                            <span class="v-num eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                                475
+                                            </span>
+                                            <span class="v-upload-date eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                                2014-05-02
+                                            </span>
+                                        </div>
+                                        <div class="v-meta-overlay">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="yk-col4" c_time="2014-01-26 19:59:20">
+                                <div class="v">
+                                    <div class="v-thumb">
+                                        <img src="#" replace="false"
+                                        alt="桥式解法" title="桥式解法">
+                                        <div class="v-thumb-tagrb">
+                                            <span class="v-time">
+                                                29:51
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="v-link">
+                                        <a title="桥式解法" target="video" href="#"
+                                        class="eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                        </a>
+                                    </div>
+                                    <div class="v-meta va eye-protector-processed" style="transition: background 0.3s ease; background-color: rgb(193, 230, 198);">
+                                        <div class="v-meta-title">
+                                            <a _hz="l_v_title" title="桥式解法" target="video" href="#">
+                                                桥式解法
+                                            </a>
+                                        </div>
+                                        <div class="v-meta-entry eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                            <i title="播放" class="ico-statplay eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                            </i>
+                                            <span class="v-num eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                                98
+                                            </span>
+                                            <span class="v-upload-date eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                                2014-01-26
+                                            </span>
+                                        </div>
+                                        <div class="v-meta-overlay">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="yk-col4" c_time="2014-01-26 19:12:39">
+                                <div class="v">
+                                    <div class="v-thumb">
+                                        <img src="#" replace="false"
+                                        alt="燃烧的远征" title="燃烧的远征">
+                                        <div class="v-thumb-tagrb">
+                                            <span class="v-time">
+                                                02:46
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="v-link">
+                                        <a title="燃烧的远征" target="video" href="#"
+                                        class="eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                        </a>
+                                    </div>
+                                    <div class="v-meta va eye-protector-processed" style="transition: background 0.3s ease; background-color: rgb(193, 230, 198);">
+                                        <div class="v-meta-title">
+                                            <a _hz="l_v_title" title="燃烧的远征" target="video" href="#">
+                                                燃烧的远征
+                                            </a>
+                                        </div>
+                                        <div class="v-meta-entry eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                            <i title="播放" class="ico-statplay eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                            </i>
+                                            <span class="v-num eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                                3
+                                            </span>
+                                            <span class="v-upload-date eye-protector-processed" style="border-color: rgba(0, 0, 0, 0.34902);">
+                                                2014-01-26
+                                            </span>
+                                        </div>
+                                        <div class="v-meta-overlay">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="home_update_loading" style="display:none;" class="YK-loading">
+                    <div class="loading loading-32">
+                    </div>
+                </div>
+                <div name="'v_page':'1','last_str':'','top_total':'0','page_order':'1','ajax_url':'/u/UNDI0NjI3OTk2/videos/','scroll_able':'0'"
+                style="display:none;" id="params">
+                </div>
+                <div id="page_num" name="1" style="display:none;">
+                </div>
+                <div class="clear">
+                </div>
+                <!-- custom end -->
+                <!-- pager begin -->
+                <div id="page_div" style="display: block;">
+                    <div class="YK-pager">
+                        <ul class="YK-pages">
+                            <li class="current">
+                                <span>
+                                    1
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</block>
+
+
+
+
+
+

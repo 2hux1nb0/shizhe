@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta http-equiv="content-language" content="zh-cn">
+        <title>
+            用户注册
+        </title>
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="__PUBLIC__/Home/css/youku.434e3a487e.css">
+        <link rel="stylesheet" href="__PUBLIC__/Home/css/signup.573e2731bc.css">
+
+    </head>
+
+    <body>
+        <div class="passport-win clearfix">
+            <div class="passport-win-main" id="J_WinMain">
+                <div class="passport-bannertop">
+                    <div class="banner-winpassport02">
+                    </div>
+                </div>
+                <div class="passport-tab" id="J_PassportTab">
+                    <ul>
+                        <li>
+                            <a href="{:U('Home/Login/login')}">
+                                登录
+                            </a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">
+                                注册
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- <div class="extand">
+                        <a href="javascript:;" class="btn-mqlogin" id="J_BtnLogin">
+                            <i class="ico-phone">
+                            </i>
+                            免注册登录
+                        </a>
+                    </div> -->
+                </div>
+                <div class="passport-body">
+                    <div class="passport-main" id="J_LoginSignup">
+                        <div class="formbox" id="signupArea" data-page="signup">
+                            <form action="" id="signupForm"
+                            name="signupForm" method="post" target="signupSubmit">
+                                <fieldset>
+                                    <div class="entry">
+                                        <label class="form_input_placeholder">
+                                            <span>
+                                                请输入手机号
+                                            </span>
+                                        </label>
+                                        <input placeholder="" widget="input" id="passport" name="passport" class="form_input form_input_l"
+                                        tabindex="1" type="text">
+                                    </div>
+                                    <div class="entry">
+                                        <label class="form_input_placeholder">
+                                            <span>
+                                                请输入6~16位密码
+                                            </span>
+                                        </label>
+                                        <input placeholder="" widget="input" id="password" name="password" class="form_input form_input_l"
+                                        tabindex="2" type="password">
+                                    </div>
+                                    <div class="entry captcha-area" id="J_CaptchaArea">
+                                        <label class="form_input_placeholder">
+                                            <span>
+                                                验证码
+                                            </span>
+                                        </label>
+                                        <input placeholder="" widget="input" id="captcha" name="captcha" class="form_input form_input_l"
+                                        tabindex="3" style="width:82px;" type="text">
+                                        <img id="J_CaptchaImg" alt="验证码">
+                                        <button widget="button" type="button" id="J_CaptchaChange" class="btn btn-large btn-minor">
+                                            <span class="btn-text">
+                                                <i class="ico-repeat">
+                                                </i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="entry smscode-signup smscode-area" id="J_SmscodeArea">
+                                        <label class="form_input_placeholder">
+                                            <span>
+                                                验证码
+                                            </span>
+                                        </label>
+                                        <input placeholder="" widget="input" id="J_SmscodeSignup" name="smscode"
+                                        class="form_input form_input_l" tabindex="3" style="width:97px;" type="text">
+                                        <button widget="button" type="button" id="J_SmsSignup" class="btn btn-large btn-minor"
+                                        style="width:50%" data-tcode="ykreg">
+                                            <span class="btn-text">
+                                                获取验证码
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="entry save">
+                                        <input widget="input" id="remember" name="remember" checked="checked"
+                                        disabled="true" tabindex="4" type="checkbox">
+                                        <label for="remember">
+                                            同意
+                                        </label>
+                                        <a href="#" target="_blank">
+                                            师者注册协议
+                                        </a>
+                                        及
+                                        <a href="#" target="_blank">
+                                            版权声明
+                                        </a>
+                                    </div>
+                                    <div class="action">
+                                        <button widget="button" type="submit" id="J_SubmitSignup" class="btn btn-large btn-major"
+                                        style="width:100%">
+                                            <span class="btn-text">
+                                                注 册
+                                            </span>
+                                        </button>
+                                    </div>
+                                </fieldset>
+                                <input widget="input" id="callback" name="callback" type="hidden">
+                                <input value=""
+                                widget="input" id="loginOperateSt" name="from" from="header" type="hidden">
+                                <input widget="input" id="J_WinType" name="wintype" value="pop" type="hidden">
+                            </form>
+                            <iframe style="display:none" name="signupSubmit">
+                            </iframe>
+                        </div>
+                        <div class="form-other">
+                            <span>
+                                已有账号
+                                <a class="link-minor" href="#">
+                                    直接登录
+                                </a>
+                            </span>
+                        </div>
+                        <!-- <div class="splitline-or">
+                            <span>
+                                或
+                            </span>
+                        </div>
+                        <div class="thirdparties passport-inner" id="connectLoginArea">
+                            <div class="main-links">
+                                <ul class="clearfix">
+                                    <li>
+                                        <a connect="qzone" config=" 'cp': 1000208, 'cpp': 4001521, 'width': 710, 'height': 400, 'title': '腾讯QQ' "
+                                        title="用QQ账号登录" charset="hz-4003757-1000494">
+                                            <i class="ico-QQ">
+                                            </i>
+                                            <em>
+                                                QQ账号登录
+                                            </em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a connect="taobao" config=" 'cp': 0, 'cpp': 0, 'width': 670, 'height': 620, 'title': '淘宝' "
+                                        title="用淘宝账号登录" charset="hz-4003759-1000494">
+                                            <i class="ico-taobao">
+                                            </i>
+                                            <em>
+                                                淘宝账号登录
+                                            </em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a connect="wechat" config=" 'cp': 0, 'cpp': 0, 'width': 400, 'height': 570, 'title': '微信' "
+                                        title="用微信扫码登录" charset="hz-4009930-1000494">
+                                            <i class="ico-wechat">
+                                            </i>
+                                            <em>
+                                                微信扫码登录
+                                            </em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a connect="alipay" config=" 'cp': 1000208, 'cpp': 4002404, 'width': 950, 'height': 700, 'title': '支付宝' "
+                                        title="用支付宝账号登录" charset="hz-4003759-1000494">
+                                            <i class="ico-zfb">
+                                            </i>
+                                            <em>
+                                                支付宝账号登录
+                                            </em>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sub-links">
+                                <span class="handle">
+                                    其他方式
+                                </span>
+                                <div class="panel">
+                                    <a connect="sina" config=" 'cp': 1000208, 'cpp': 4000632, 'width': 750, 'height': 580, 'title': '微博' "
+                                    title="用新浪微博账号登录" charset="hz-4003755-1000494">
+                                        <i class="ico-weibo">
+                                        </i>
+                                    </a>
+                                    <a connect="tencent" config=" 'cp': 1000208, 'cpp': 4001348, 'width': 630, 'height': 440, 'title': '腾讯微博' "
+                                    title="用腾讯微博账号登录">
+                                        <i class="ico-txweibo">
+                                        </i>
+                                    </a>
+                                    <a connect="renren" config=" 'cp': 1000208, 'cpp': 4000632, 'width': 600, 'height': 390, 'title': '人人网' "
+                                    title="用人人网账号登录">
+                                        <i class="ico-renren">
+                                        </i>
+                                    </a>
+                                    <a connect="kaixin" config=" 'cp': 1000208, 'cpp': 4003120, 'width': 570, 'height': 370, 'title': '开心网' "
+                                    title="用开心账号登录">
+                                        <i class="ico-kaixin">
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="passport-adsignup">
+                            <div class="win-signup-pic">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="passport-main mq-login" id="J_MQLogin">
+                        <div class="formbox mqform" id="J_MQMain">
+                            <form method="post" action="" id="J_FormMQLogin"
+                            name="formMQLogin" target="formMQLogin">
+                                <fieldset>
+                                    <div class="entry phone">
+                                        <label class="form_input_placeholder">
+                                            <span>
+                                                请输入手机号
+                                            </span>
+                                        </label>
+                                        <input placeholder="" widget="input" id="mobile" name="mobile" class="form_input form_input_l"
+                                        tabindex="1" type="text">
+                                    </div>
+                                    <div class="entry phone" style="display:none">
+                                        <span class="phonenum" id="MQmobilenum">
+                                        </span>
+                                        <span class="action" id="MQchangenum">
+                                            <a href="javascript:;">
+                                                更改
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div id="J_Captcha_Placeholder">
+                                    </div>
+                                    <div class="entry smscode-area">
+                                        <label class="form_input_placeholder">
+                                            <span>
+                                                验证码
+                                            </span>
+                                        </label>
+                                        <input placeholder="" widget="input" id="J_SmscodeMQLogin" name="code"
+                                        class="form_input form_input_l" tabindex="4" style="width:97px;" type="text">
+                                        <button widget="button" type="button" id="J_SmsMQLogin" class="btn btn-large btn-minor"
+                                        style="width:120px;position:absolute;right:0;top:0;" data-tcode="mqlogin">
+                                            <span class="btn-text">
+                                                获取验证码
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="entry save">
+                                        <input widget="input" id="J_MQCheck" checked="checked" disabled="true"
+                                        data-dfname="mqcheck" type="checkbox">
+                                        <label for="J_MQCheck">
+                                            同意
+                                        </label>
+                                        <a href="#" target="_blank">
+                                            师者注册协议
+                                        </a>
+                                        及
+                                        <a href="#" target="_blank">
+                                            版权申明
+                                        </a>
+                                    </div>
+                                    <div class="action">
+                                        <button widget="button" type="submit" id="J_SubmitMQLogin" class="btn btn-large btn-major"
+                                        style="width:100%">
+                                            <span class="btn-text">
+                                                快速登录
+                                            </span>
+                                        </button>
+                                    </div>
+                                </fieldset>
+                                <input widget="input" id="J_MQCallback" name="callback" type="hidden">
+                                <input value=""
+                                widget="input" id="loginOperateSt2" name="from" from="header" type="hidden">
+                                <input widget="input" id="J_MQWinType" name="wintype" value="pop" type="hidden">
+                            </form>
+                            <iframe style="display:none" name="formMQLogin">
+                            </iframe>
+                            <div class="form-other">
+                                <span class="register">
+                                    已有账号
+                                    <a class="link-minor" href="#">
+                                        直接登录
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="passport-adsignup">
+                            <div class="win-eq-pic">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="passport-win-status" id="J_WinStatus" style="display:none;">
+                <div class="head">
+                    快速登录
+                </div>
+                <div class="win-stbox st-wrap">
+                    <div class="result">
+                        <i class="ico-success">
+                        </i>
+                        登录成功！
+                    </div>
+                    <div class="formbox">
+                        <form target="formSetpwd">
+                            <fieldset>
+                                <div class="entry">
+                                    <div class="tips">
+                                        请设置密码，方便以后登录。
+                                    </div>
+                                    <label class="form_input_placeholder">
+                                        <span>
+                                            请输入6~16位密码
+                                        </span>
+                                    </label>
+                                    <input placeholder="" widget="input" id="J_InputMQPassword" name="password"
+                                    class="form_input form_input_l" tabindex="1" type="password">
+                                </div>
+                                <div class="action">
+                                    <button widget="button" type="submit" id="J_BtnMQPassword" class="btn btn-large btn-major"
+                                    style="width:100%">
+                                        <span class="btn-text">
+                                            保 存
+                                        </span>
+                                    </button>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <iframe style="display:none" name="formSetpwd">
+                        </iframe>
+                    </div>
+                    <div class="form-other">
+                        如跳过，系统将生成随机密码发送到您手机，可以在个人设置中修改。
+                        <div class="linkskip">
+                            <a class="link-minor" id="J_BtnSkip" href="javascript:;">
+                                跳过
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="win-stbox st-success" style="display:none;">
+                    <div class="result">
+                        <i class="ico-success">
+                        </i>
+                        保存成功！
+                        <div class="info">
+                            3秒后自动关闭
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="passport-win-status" id="J_WinNickname" style="display:none;">
+                <div class="head">
+                    免费注册
+                </div>
+                <div class="win-stbox st-wrap">
+                    <div class="result">
+                        <i class="ico-success">
+                        </i>
+                        注册成功！
+                    </div>
+                    <div class="formbox">
+                        <form target="formNickname">
+                            <fieldset>
+                                <div class="entry">
+                                    <div class="tips">
+                                        请设置昵称
+                                    </div>
+                                    <label class="form_input_placeholder">
+                                        <span>
+                                            2-15个汉字或4-30个字符
+                                        </span>
+                                    </label>
+                                    <input placeholder="" widget="input" id="J_InputNickname" name="nickname"
+                                    class="form_input form_input_l" tabindex="1" type="text">
+                                </div>
+                                <div class="action">
+                                    <button widget="button" type="submit" id="J_BtnNickname" class="btn btn-large btn-major"
+                                    style="width:100%">
+                                        <span class="btn-text">
+                                            保 存
+                                        </span>
+                                    </button>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <iframe style="display:none" name="formNickname">
+                        </iframe>
+                    </div>
+                    <div class="form-other">
+                        如跳过，系统将生成随机昵称。
+                        <div class="linkskip">
+                            <a class="link-minor" id="J_BtnSkipNickname" href="javascript:;">
+                                跳过
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="win-stbox st-success" style="display:none;">
+                    <div class="result">
+                        <i class="ico-success">
+                        </i>
+                        保存成功！
+                        <div class="info">
+                            3秒后自动关闭
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

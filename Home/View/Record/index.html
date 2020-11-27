@@ -1,0 +1,201 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>个人中心</title>
+    <meta name="title" content="">
+
+<link href="__PUBLIC__/Home/css/qheader.css" type="text/css" rel="stylesheet">
+<link href="__PUBLIC__/Home/css/chuda_qheader.css" type="text/css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/css/search/s_comm.css" />
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Home/css/search/s_video.css" />
+    <link href="__PUBLIC__/Home/css/youku.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="__PUBLIC__/Home/js/search/jquery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Home/js/search/iku.js"></script>
+    
+</head>
+
+<body>
+    <div class='window'>
+        <div class='screen'>
+            <!-- 头部 -->
+            <include file="Public/header"/>
+            <!-- 头部结束 -->
+
+
+      <div class="sk_container">
+
+    <div class="sk_toolbar">
+        <div class="tab">
+            <ul>
+                  <li class="">
+                    <a style="font-size: 30px;" href="">个人中心</a>
+                </li>
+                <li class="current">
+                    <a href="">观看记录</a>
+                </li>
+                <li class="">
+                    <a href="{:U('Home/Collect/index')}">我的收藏</a>
+                </li>
+                      <li class="">
+                    <a href="{:U('Home/Subscribe/index')}">我的订阅</a>
+                </li>
+            </ul>
+        </div>
+        <!-- ========================👇==============重要=======待开发功能 ↓========================-->
+        <!-- <div class="switch">
+            <ul>
+                     <li class="">
+                    <a href="">我的频道</a>
+                </li>
+                      <li class="">
+                    <a href="" >视频管理</a>
+                </li>
+
+            </ul>
+        </div> -->
+        <!-- =========👆=========== -->
+    </div>
+
+
+    <div class="sk_filter">
+     <div class="sk_toolset">
+            <div class="sub_tab">
+                <ul>
+
+                    <li class="current"><a href="">综合排序</a></li>
+                    <li class=""><a href="__URL__/index/search/id">最新发布</a></li>
+                    <li class=""><a href="__URL__/index/play/number">最多播放</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+            <div class="viewtype">
+                 <ul>
+                    <li class="selected">
+                        <a title="棋盘式" href="javascript:;" class="chesstype ico ico_rows">棋盘式</a>
+                    </li>
+                    <li class="">
+                        <a title="列表式" href="javascript:;" class="listtype ico ico_cols">列表式</a>
+                    </li>
+                </ul>
+            </div>
+          </div>
+<!-- checked  end -->
+</div>
+    <div class="sk_result">
+        <div class="sk-box">
+            <div class="bd">
+                <div class="sk-vlist">
+
+                    <foreach name="model" item="v">
+
+                    <div class="v">
+                        <div class="v-thumb">
+                            <a href="{:U('Home/Play/index')}?videoId={$v['id']}"><img alt="{$v.title}" src="{$v['pic']}" onerror=""></a>
+                                              <div class="v-thumb-tagrt">
+                                <div class="definition">
+                                    <span class="ico__SD"></span>
+                                </div>
+                            </div>
+                            <!-- 重要 播放时长 -->
+                            <!-- <div class="v-thumb-tagrb">
+                                <span class="v-time">23:40</span>
+                            </div> -->
+
+                        </div>
+
+                        <div class="v-meta va">
+                            <div class="v-meta-title" >
+                                <a title="{$v.title}" style="display:none;" showall="true" target="_blank" href="{:U('Home/Play/index')}?videoId={$v['id']}" ><span class="highlight">{$v.title}</span> </a>
+                                <a title="{$v.title}" style="" showall="false" target="_blank" href="{:U('Home/Play/index')}?videoId={$v['id']}" ><span class="highlight">{$v.title}</span></a>
+                            </div>
+                            <div class="v-meta-entry">
+                                  <div class="v-meta-data"><label>作者:</label>
+                                        <span class="username">
+                                                <a target="_blank" charset="811-1-1-1" href="#">SZ-PJ</a>
+                                        </span>
+                                    </div>
+                                    <div class="v-meta-data"><label>播放: </label> <span>{$v.number}</span></div>
+                                <div class="v-meta-data"><label>来源: </label> <span class="siteurl">师者</span></div>
+                                <div class="v-meta-data"><label>发布: </label> <span class="pub">{$v.time}</span></div>
+                            </div>
+                        </div>
+                    </div>
+            </foreach>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- video end -->
+					<div class="sk_pager">
+							<ul>
+						 <li class=""><span>{$pages}</span></li>
+							</ul>
+					</div>
+<!-- 底部广告  勿删 -->
+      <!-- <div class="sk_banner">
+                
+                <div id="ab_282" style="height: 100px; display: block;"><div class="mod" id="s_h_508376" align="center"><a href=""  target="_blank"><img src="__PUBLIC__/Home/css/search-uploads/picture/970-100_002.jpg" border="0"></a></div></div>
+                <div id="ab_151"></div>
+            </div>
+ -->
+
+
+</div> <!-- container end -->
+
+
+<div class="sk_footer">
+    <div class="copyright">
+        Copyright&copy;2020 师者shizhe.cn版权所有
+        <a href="http://www.miibeian.gov.cn/" target="_blank">京ICP证060288号</a>
+        <a href="{:U('Home/Registered/Copyright')}" target="_blank">免责声明</a>
+
+        <a href="{:U('Home/Registered/RA')}" target="_blank">开放协议</a>
+    </div>
+</div>
+</div></div>
+<!-- 反馈 -->
+<div id="sideBar"></div>
+
+<!-- about soku count start  -->
+
+<!-- about soku count end  -->
+</body>
+
+
+<!-- 显示模式切换 -->
+
+<script type="text/javascript">
+window.soku_logExt = "&soku=0|358362";
+var isIku = false;
+var loadJs = new LoadJs({"load":[{"src":"__PUBLIC__/Home/js/search/youkutool.js"},
+                                {"src":"__PUBLIC__/Home/js/search/sk-plugins.js","callback":function(){
+                                    $("span.remind span[countdown^='1']").each(function(){
+                                        $(this).countdown({"max":1000*60*60*2,"onTime":1439265087363,"endTime":parseInt($(this).attr("countdown"),10)});
+                                    });
+                                    if(!isIku){
+                                        $("a[typeboolean='true']").playlist();
+                                        $("#sideBar").feedback({"keyword":"1","source":1,"app":false});
+                                    }
+                                }},
+                                {"src":"__PUBLIC__/Home/js/search/sk-common.js","callback":function(){
+                                    SourceView.init();
+                                    HeaderControl.init();
+                                    MajorControl.init();
+                                    MajorUserControl.init();
+                                }},
+                                {"src":"__PUBLIC__/Home/js/search/youlog.js"},
+                                {"src":"__PUBLIC__/Home/js/search/soku-analytics.js"}
+                                ]}).include();
+if(!isIku){
+loadJs.include([{"callback":function(){XBox.init({"site":2,"history":true});}},
+                {"src":""}
+                ]);
+}
+</script>
+
+</html>

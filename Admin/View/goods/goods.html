@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="__PUBLIC__/Admin/css/type/bootstrap-combined.min.css" type="text/css">
+            <script src="__PUBLIC__/Admin/js/type/jquery.min.js"></script>
+        <script src="__PUBLIC__/Admin/js/type/bootstrap.min.js"></script>
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="btn-group">
+                 <button class="btn">Action</button> <button data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                   <!--  <li>
+                        <a href="#">全部分类</a>
+                    </li>
+               
+                    <li class="divider">
+                    </li> -->
+                         <foreach name="cates" item="v">
+                    <li class="dropdown-submenu">
+                         <a tabindex="-1" href="#">{$v.name}</a>
+                   
+
+                        <ul class="dropdown-menu">
+                         <foreach name="v['submenu']" item="vo">
+                           
+                    <li class="dropdown-submenu">
+                         <a tabindex="-2" href="#">{$vo.name}</a>
+
+                                <ul class="dropdown-menu">        
+                         <foreach name="vo['submenu']" item="vou">
+                           
+                    <li class="dropdown-submenu">                     
+                         <a tabindex="-3" href="#">{$vou.name}</a>
+                            </li>
+                        </foreach>
+                            </ul>
+                            </li>
+                        </foreach>
+
+                        </ul>
+                    </li>
+                         </foreach>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+
+<!-- 老版本播放页面,现已废弃,勿删 -->
+
+<div id="vpvideotitlev5_wrap">
+    <div id="vpvideotitlev5">
+        <!--视频基本信息-->
+        <div class="base">
+            <div class="base_info">
+                <h1 title="" class="title">
+                    <span id="subtitle">
+                        {$resources['title']}
+                    </span>
+                </h1>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="playBox" class="play_area" style="">
+    <div style="position:absolute;top:0;left:50%;z-index:10000;display:none"
+    id="div_ad_crazy_v5">
+    </div>
+    <div id="playerBox" class="playBox">
+        <div class="playArea">
+            <div style="" class="player" id="player" err="">
+                <!--播放器开始-->
+                <object type="application/x-shockwave-flash" width="100%" height="100%"
+                data="__PUBLIC__/Home/flvplayer.swf?file={$resources['content']}">
+                    <param name="movie" value="__PUBLIC__/Home/flvplayer.swf?file={$resources['content']}&showfsbutton=true&autostart=true"/>
+                    <param name="wmode" value="transparent" />
+                    <param name="quality" value="high" />
+                    <param name="allowfullscreen" value="true" />
+                </object>
+                <!--播放器结束-->
+            </div>
+        </div>
+    </div>
+    <!--播放列表-->
+    <!--mv、专辑播放列表-->
+    <div id="player_sidebar" class="listBox">
+        <div class="listSkip">
+
+            <div id="listareaother" style="display: block;" class="listArea">
+                <div class="show_tab">
+                    <div class="tabs">
+                        <ul id="DramaTab">
+                            <li _to="Drama" class="current">
+                                <span>
+                                    选集
+                                </span>
+                            </li>
+                            <li style="display:none" _to="timeline" class="">
+                                <span>
+                                    %s
+                                </span>
+                            </li>
+                            <li style="display:none" _to="actionInfo" class="">
+                                <span>
+                                    %s
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="body">
+                    <div style="display: block;" id="Drama">
+
+                        <div class="scroll-area scroll-area-s">
+                            <div id="Scrollbar" class="scrollbar" style="visibility: visible;">
+                                <div class="scrollbar-up">
+                                </div>
+                                <div class="scrollbar-track">
+                                </div>
+                                <div class="scrollbar-down">
+                                </div>
+                            </div>
+                            <div class="scroller">
+                                <div id="playlist_list" class="scroller-container">
+                                    <div class="playlists ablists">
+                                        <div class="lists">
+                                            <ul id="playlist_content" class="items">
+                                                <div id="vpvideoplaylistv5_wrap">
+                                                    <div id="vpvideoplaylistv5">
+                                                        <li  seq="0" id="item_XOTYyNzcwNDMy"
+                                                        class="item">
+                                                            <a data-from="y1.2-3.4.1" charset="hz-4006639-1000631" title="{$resources['title']}"
+                                                            href="#">
+                                                                <span class="l_img">
+                                                                    <img alt="{$resources['title']}" src="{$resources['pic']}">
+                                                                </span>
+                                                                <span class="l_title">
+                                                                    {$resources['title']}
+                                                                </span>
+                                                                <span class="l_stat">
+                                                                    <label>
+                                                                        播放:
+                                                                    </label>
+                                                                    <em class="num">
+                                                                        {$resources['count']}
+                                                                    </em>
+                                                                </span>
+
+                                                                <span class="l_order">
+                                                                    <em class="num">
+                                                                        01
+                                                                    </em>
+                                                                    <span class="bg">
+                                                                    </span>
+                                                                </span>
+                                                                <span class="l_status">
+                                                                    <i class="ico__play">
+                                                                    </i>
+                                                                    正在播放
+                                                                    <span class="bg">
+                                                                    </span>
+                                                                </span>
+                                                                <span class="l_ishd">
+                                                                    <i title="超清" class="ico__SD">
+                                                                    </i>
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                    </div>
+                                                </div>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="listcontrol_side" class="listcontrol_side">
+                    <a charset="hz-4006641-1000631" title="收起列表" class="listcontrol_a">
+                        <span class="ctrlink">
+                            <i class="ico_right">
+                            </i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <!--listArea end-->
+            <div style="display: block;" class="listcontrol">
+                <div onclick="Log.log(1, 'tp=1&amp;cp=4006643&amp;cpp=1000631')" class="handle">
+                </div>
+            </div>
+            <div style="display:none;" class="list_tips">
+                <div class="tips">
+                    <a charset="hz-4006185-1000595" class="handler">
+                    </a>
+                    <div class="arrow">
+                    </div>
+                    <div class="content">
+                    </div>
+                </div>
+                <iframe frameborder="0" scrolling="no" class="mask">
+                </iframe>
+            </div>
+        </div>
+        <iframe frameborder="0" scrolling="no" style="display:none" class="listmask">
+        </iframe>
+    </div>
+    <!--listBox end-->
+    <div class="clear">
+    </div>
+</div>

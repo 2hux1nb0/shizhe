@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>
+           {$datas[0]['title']}
+        </title>
+        <style type="text/css">
+            html{*overflow:auto;_overflow-x:hidden;-webkit-text-size-adjust:none;height:
+            100px; background:url('http://127.0.0.1/Youku/Public/Home/pic/4a7dc0a804a74e76b5f518c21056149f.jpg')
+            no-repeat;} 
+            body{ 
+                width:100%;
+                margin:0; height:100%; font-family:"Microsoft YaHei",tahoma,arial,simsun;}
+            p,h1,h2,h3,h4{ margin-top:0; margin-bottom:0;} .main{ width:850px; margin:0
+            auto;} .container{ padding-left:20px; padding-top:130px;} h1{ font-size:42px;}
+            h2{ font-size:22px; font-weight:100; margin-top:2px; margin-bottom:2px;}
+            h3{ font-size:26px; color:#2F2D2E;} .Countdown{ padding-top: 30px; font-size:30px;
+            font-family: tahoma,arial,simsun; color: #4A4A4A;} .Countdown span{ display:inline-block;*display:inline;*zoom:1;
+            width:350px;line-height:55px;text-align:center; background-color:rgba(0,0,0,0.5);color:white;text-shadow:1px
+            1px 1px #333;} .Countdown .bd{ width:16px; background-image:none;}
+        </style>
+    </head>
+    
+    <body>
+        <div class="main">
+            <div class="container">
+                <div class="content">
+                    <h1>
+                        师者正在维护中...
+                    </h1>
+                    <h2>
+                        将给您带来全新的体验
+                    </h2>
+                    <h3>
+                        敬请期待
+                    </h3>
+                </div>
+                <div class="Countdown" id="time">
+                    <span id="m">
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script>
+            //获取当前时间的函数
+            function showtime() {
+                //实例化当前时间对象
+                var myDate = new Date();
+                //获取当前时间对象的格式化日期时间
+                var m = myDate.toLocaleString();
+                //修改相应区域的时间,实现动态改变的效果
+                document.getElementById('m').innerHTML = m;
+            }
+            //设置计时器,时间间隔为1秒
+            setInterval(function() {
+                showtime();
+            },
+            1000);
+        </script>
+    </body>
+
+</html>

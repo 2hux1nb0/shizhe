@@ -1,0 +1,409 @@
+<extend name="index"/>
+<block name="head">
+    <include file="head"/>
+    <style type="text/css">
+        .YK-nav li.zhuanji a {
+            border-bottom: 3px solid #3399e0;
+            _padding-top: 22px;
+            _position: relative;
+            _top: 3px;
+        }
+    </style>
+</block>
+<block name="partnav">
+    <div id="partnav">
+        <div class="YK-nav">
+            <ul>
+                <li class="current"><a href="__URL__/index.html">主页</a></li>
+                <li class="zhuanji">
+                    <a href="__URL__/zhuanji.html" id="nav_playlist">专辑</a>
+                </li>
+                <li>
+                    <a href="__URL__/taolun.html" id="nav_guestbook">讨论区</a>
+                </li>
+                <li>
+                    <a href="__URL__/shipin.html" id="nav_video">视频</a>
+                </li>
+                <!--   <li class="current"> -->
+
+                <li>
+                    <div class="clear"></div>
+                    <div class="setting" id="nav_handle" style="display:none">
+                        <div class="handle"><a href="javascript:;"></a></div>
+                        <div class="edit" style="display:none">
+                            <ul>
+                                <li><a href="javascript:;" _for="edit_nav">编辑模块</a></li>
+                                <li><a href="javascript:;" _for="hide_nav">隐藏导航</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+            <div class="clear"></div>
+            <div class="YK-search">
+                <div class="searchinput">
+                    <input type="text" maxlength="50"
+                           style="font-family:Microsoft YaHei,微软雅黑,helvetica,arial,verdana,tahoma,sans-serif;"
+                           id="searchinput" value="搜索视频" class="form_input form_input_s form_input_defaultvalue">
+                    <button class="search-btn"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="YK-content">
+    <div class="YK-content">
+        <div class="YK-playlist">
+            <div class="YK-box">
+                <div class="hd">
+                    <div class="title">专辑<span class="append">共1个专辑</span></div>
+                </div>
+                <div class="clear "></div>
+                <div class="bd">
+                    <ul class="yk-tab" id="folder_order_ul">
+                        <li id="folder_ct" class="current"><a href="/u/UNDI0NjI3OTk2/playlists/view_1_order_1">最新发布</a></li>
+                        <li id="folder_vv"><a href="/u/UNDI0NjI3OTk2/playlists/view_1_order_2">最多播放</a></li>
+                        <li id="folder_vi"><a href="/u/UNDI0NjI3OTk2/playlists/view_1_order_3">最多视频</a></li>
+                    </ul>
+                    <div class="clear "></div>
+                    <div id="home_update_content">
+                        <!--吊用共用模版-->
+                        <div class="entry" play_list="ture" id="">
+                            <div class="yk-row">
+                                <div class="yk-col4 playlist-col">
+                                    <div class="playlist-info">
+                                        <a href=""
+                                           target="video"><h6 title="ansys教程}">ansys教程</h6></a>
+
+                                        <div class="vinfo">
+                                            <ul>
+                                                <li>视频:18</li>
+                                                <li>播放:15,602</li>
+                                            </ul>
+                                        </div>
+                                        <div class="set-top"><span></span></div>
+                                    </div>
+                                </div>
+                                <div class="yk-col4">
+
+
+                                    <div class="v firstVideo" c_time="2013-11-28 20:39:31">
+
+
+                                        <div class="v-thumb">
+                                            <img src=""
+                                                 alt="第一课 ansys14.0的安装">
+
+                                            <div class="v-thumb-tagrb"></div>
+                                        </div>
+                                        <div class="v-link">
+                                            <a href=""
+                                               target="video" title="第一课 ansys14.0的安装"></a>
+                                        </div>
+                                        <div class="v-meta vb">
+                                            <div class="v-meta-entry"></div>
+                                            <div class="v-meta-entry"><span class="v-title">第一课 ansys14.0的安装</span>
+                                            </div>
+                                            <div class="v-meta-tagrt">
+                                                <span class="v-time">18:16</span>
+                                            </div>
+                                            <div class="v-meta-overlay"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="yk-col4 playlist-col2">
+
+                                    <div class="v-mini-group">
+
+
+                                        <div class="v v-mini">
+                                            <div class="v-thumb">
+                                                <img src=""
+                                                     alt="第二课 界面介绍及建立关键点">
+                                            </div>
+                                            <div class="v-link">
+                                                <a href=""
+                                                   target="video" title="第二课 界面介绍及建立关键点"></a>
+                                            </div>
+                                            <div class="v-meta vb">
+                                                <div class="v-meta-tagrt">
+                                                    <span class="v-time">30:09</span>
+                                                </div>
+                                                <div class="v-meta-overlay"></div>
+                                            </div>
+
+                                            <div class="v-playlist-title">
+                                                <a href=""
+                                                   target="video" title="第二课 界面介绍及建立关键点">第二课 界面介绍及建立...</a>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="v v-mini">
+                                            <div class="v-thumb">
+                                                <img src=""
+                                                     alt="第三课  建立点">
+                                            </div>
+                                            <div class="v-link">
+                                                <a href=""
+                                                   target="video" title="第三课  建立点"></a>
+                                            </div>
+                                            <div class="v-meta vb">
+                                                <div class="v-meta-tagrt">
+                                                    <span class="v-time">17:27</span>
+                                                </div>
+                                                <div class="v-meta-overlay"></div>
+                                            </div>
+
+                                            <div class="v-playlist-title">
+                                                <a href=""
+                                                   target="video" title="第三课  建立点">第三课 建立点</a>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="v v-mini">
+                                            <div class="v-thumb">
+                                                <img src=""
+                                                     alt="第四课  线、面、体简介">
+                                            </div>
+                                            <div class="v-link">
+                                                <a href=""
+                                                   target="video" title="第四课  线、面、体简介"></a>
+                                            </div>
+                                            <div class="v-meta vb">
+                                                <div class="v-meta-tagrt">
+                                                    <span class="v-time">25:49</span>
+                                                </div>
+                                                <div class="v-meta-overlay"></div>
+                                            </div>
+
+                                            <div class="v-playlist-title">
+                                                <a href=""
+                                                   target="video" title="第四课  线、面、体简介">第四课 线、面、体简介</a>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="v v-mini">
+                                            <div class="v-thumb">
+                                                <img src=""
+                                                     alt="第五课extrude用法">
+                                            </div>
+                                            <div class="v-link">
+                                                <a href=""
+                                                   target="video" title="第五课extrude用法"></a>
+                                            </div>
+                                            <div class="v-meta vb">
+                                                <div class="v-meta-tagrt">
+                                                    <span class="v-time">08:37</span>
+                                                </div>
+                                                <div class="v-meta-overlay"></div>
+                                            </div>
+
+                                            <div class="v-playlist-title">
+                                                <a href=""
+                                                   target="video" title="第五课extrude用法">第五课extrude用法</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="yk-col4 playlist-col2">
+
+                                    <div class="v-mini-group">
+
+
+                                        <div class="v v-mini">
+                                            <div class="v-thumb">
+                                                <img src=""
+                                                     alt="第六课 选择 编号显示">
+                                            </div>
+                                            <div class="v-link">
+                                                <a href=""
+                                                   target="video" title="第六课 选择 编号显示"></a>
+                                            </div>
+                                            <div class="v-meta vb">
+                                                <div class="v-meta-tagrt">
+                                                    <span class="v-time">21:10</span>
+                                                </div>
+                                                <div class="v-meta-overlay"></div>
+                                            </div>
+
+                                            <div class="v-playlist-title">
+                                                <a href=""
+                                                   target="video" title="第六课 选择 编号显示">第六课 选择 编号显示</a>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="v v-mini">
+                                            <div class="v-thumb">
+                                                <img src=""
+                                                     alt="第七课 Booleans">
+                                            </div>
+                                            <div class="v-link">
+                                                <a href=""
+                                                   target="video" title="第七课 Booleans"></a>
+                                            </div>
+                                            <div class="v-meta vb">
+                                                <div class="v-meta-tagrt">
+                                                    <span class="v-time">10:53</span>
+                                                </div>
+                                                <div class="v-meta-overlay"></div>
+                                            </div>
+
+                                            <div class="v-playlist-title">
+                                                <a href=""
+                                                   target="video" title="第七课 Booleans">第七课 Booleans</a>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="v v-mini">
+                                            <div class="v-thumb">
+                                                <img src=""
+                                                     alt="第八课 复制镜像file菜单">
+                                            </div>
+                                            <div class="v-link">
+                                                <a href=""
+                                                   target="video" title="第八课 复制镜像file菜单"></a>
+                                            </div>
+                                            <div class="v-meta vb">
+                                                <div class="v-meta-tagrt">
+                                                    <span class="v-time">18:01</span>
+                                                </div>
+                                                <div class="v-meta-overlay"></div>
+                                            </div>
+
+                                            <div class="v-playlist-title">
+                                                <a href=""
+                                                   target="video" title="第八课 复制镜像file菜单">第八课 复制镜像file菜单</a>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="v v-mini">
+                                            <div class="v-thumb">
+                                                <img src=""
+                                                     alt="第九课坐标系">
+                                            </div>
+                                            <div class="v-link">
+                                                <a href=""
+                                                   target="video" title="第九课坐标系"></a>
+                                            </div>
+                                            <div class="v-meta vb">
+                                                <div class="v-meta-tagrt">
+                                                    <span class="v-time">12:05</span>
+                                                </div>
+                                                <div class="v-meta-overlay"></div>
+                                            </div>
+
+                                            <div class="v-playlist-title">
+                                                <a href=""
+                                                   target="video" title="第九课坐标系">第九课坐标系</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="yk-col4 playlist-col1">
+
+                                    <div class="v-mini-group">
+
+
+                                        <div class="v v-mini">
+                                            <div class="v-thumb">
+                                                <img src=""
+                                                     alt="第十课工作平面">
+                                            </div>
+                                            <div class="v-link">
+                                                <a href=""
+                                                   target="video" title="第十课工作平面"></a>
+                                            </div>
+                                            <div class="v-meta vb">
+                                                <div class="v-meta-tagrt">
+                                                    <span class="v-time">09:30</span>
+                                                </div>
+                                                <div class="v-meta-overlay"></div>
+                                            </div>
+
+                                            <div class="v-playlist-title">
+                                                <a href=""
+                                                   target="video" title="第十课工作平面">第十课工作平面</a>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="v v-mini">
+                                            <div class="v-thumb">
+                                                <img src=""
+                                                     alt="第11课建模实例">
+                                            </div>
+                                            <div class="v-link">
+                                                <a href=""
+                                                   target="video" title="第11课建模实例"></a>
+                                            </div>
+                                            <div class="v-meta vb">
+                                                <div class="v-meta-tagrt">
+                                                    <span class="v-time">24:44</span>
+                                                </div>
+                                                <div class="v-meta-overlay"></div>
+                                            </div>
+
+                                            <div class="v-playlist-title">
+                                                <a href=""
+                                                   target="video" title="第11课建模实例">第11课建模实例</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div id="home_update_loading" style="display:none;" class="YK-loading">
+                        <div class="loading loading-32"></div>
+                    </div>
+                    <div name="'playlist_flg':'1','page_order':'1','ajax_url':'/u/UNDI0NjI3OTk2/playlists/','scroll_able':'0'"
+                         style="display:none;" id="params"></div>
+                    <div id="page_num" name="1" style="display:none;"></div>
+                    <!-- pager begin -->
+                    <div id="page_div" style="display: block;">
+                        <div class="YK-pager">
+                            <ul class="YK-pages">
+
+
+                                <li class="current"><span>1</span></li>
+
+
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript">
+            document.observe("dom:loaded", function () {
+                playListFun.init();
+                moreupdate.init();
+            });
+        </script>
+
+
+    </div>
+</block>

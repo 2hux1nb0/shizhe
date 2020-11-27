@@ -1,0 +1,138 @@
+<div class="yk-header yk-header-fixed" id="qheader">
+	<div class="yk-header-container" id="qheader_box">
+		<div class="yk-box">
+
+			<div class="yk-logo">
+				<a href="#" title="Shizhe 师者" attr="g_6"><img src="__PUBLIC__/Home/pic/shizhe_lishu.png" alt="Shizhe 师者" attr="1"></a>
+			</div>
+			<div class="yk-so">
+				<div class="yk-so-box">
+					<form id="qheader_search" action="#" method="get" target="_blank" onsubmit="">
+						<input name="q" id="headq" autocomplete="off" type="text">
+                        <a href="#" target="_blank" class="rankq"><i></i></a>
+						<button type="submit"><em>搜索</em></button>
+						<div id="qheader_keywords" style="display:none;">
+						<a target="_blank" href="#" class=""></a>
+						</div>
+						<input style="display:none;" type="text">
+						<div style="display: none;"><div class=""><div class="sk_box sk_youku" style="display:block;"><iframe id="sk_holder_iframe" scrolling="no" style="position: absolute; z-index: 0; top: -2px; left: -2px;" frameborder="0"></iframe><div class="main" id="_xbox_refresh"></div></div></div></div><div></div><link href="__PUBLIC__/Home/css/s_kubox.css" type="text/css" rel="stylesheet">
+					</form>
+				</div>
+			</div>
+
+			<div class="yk-ucenter">
+				<div class="yk-userlog" id="qheader_userlog">
+                    <div class="yk-userlog-before" id="qheader_logbefore" style="">
+                    	<div class="entry">
+                            <a id="qheader_login" href="#"><i class="ico-user-l2"></i>登录</a><span class="splite">|</span><a href="#" target="_blank">注册</a>
+                        </div>
+                    </div>
+                    <div class="yk-userlog-after" style="display:none;" id="qheader_logafter">
+                    	<div class="dropdown" fire="hover" id="qheader_username">
+							<div class="handle" id="qheader_username_show"></div>
+							<div class="panel" id="qheader_username_panel"></div>
+						</div>
+                    </div>
+				</div>
+
+                <!-- <div class="yk-notice">
+					<div class="dropdown" fire="hover" id="qheader_notice">
+						<div class="handle" id="qheader_notice_show">
+							<a href="#" target="_blank">
+								<i class="ico-notifications-l2"></i>
+								<span>通知</span>
+								<b class="caret"></b>
+								<span class="spot" id="qheader_notice_num" style="display:none;"></span>
+							</a>
+						</div>
+						<div class="panel" id="qheader_notice_panel">
+							<div class="yk-hpanel-ico ico-arrow-top-white"></div>
+							<div class="panel-ani" id="qheader_notice_info"></div>
+						</div>
+					</div>
+				</div> -->
+
+                <div class="yk-upload">
+                    <div class="dropdown" id="qheader_upload">
+                        <div class="handle"><a href="{:U('Home/Upload/index')}" target="_blank"><i class="ico-upload-l2"></i><span>上传</span>
+
+                        </a></div>
+                        <div class="panel">
+                        	<div class="yk-hpanel-ico ico-arrow-top-white"></div>
+                            <ul class="yk-userservices-list">
+                                <li><a href="#" target="_blank"><i class="ico-upload-l2"></i>上传视频</a></li>
+                                <li><a href="#" target="_blank"><i class="ico-videomanage-l2"></i>创作中心</a></li>
+                                <li><a href="#" target="_blank" id="qheader_upload_userspace"><i class="ico-myspace-l2"></i>我的频道</a></li>
+								<li><a href="#" target="_blank"><i class="ico-VR-l2"></i>数据分析</a></li>
+                                <li><a href="#" target="_blank"><i class="ico-sharing-l2"></i>自频道加油站</a></li>
+                                <li><a href="#" target="_blank"><i class="ico-app-l2"></i>PC客户端</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+			</div>
+
+			<div class="yk-menus-wrap">
+	            <ul class="yk-menus">
+	                <li class="yk-menus-item yk-menus-item-home"><a href="{:U('Home/Index/index')}" title="返回首页">首页</a></li>
+	                <li class="yk-menus-item yk-menus-item-channel">
+	                    <div class="yk-guide">
+	                        <div class="dropdown" id="qheader_channel">
+	                            	<div class="handle"><a href="javascript:void(0);"><i class="ico-channels-l2"></i><span>频道</span></a></div>
+	                            	<div class="panel">
+                                    	<div class="yk-hpanel-ico ico-arrow-top-white"></div>
+										<div class="yk-guide-entry yk-channels">
+											<dl class="yk-guide-item">
+												<dd><a href="#">师者首页</a></dd>
+												<dd><a href="#">电视剧</a></dd>
+												<dd><a href="#">电影</a></dd>
+												<dd><a href="#">综艺</a></dd>
+												<dd><a href="#">音乐</a></dd>
+												<dd><a href="#">少儿</a></dd>
+										                 <dd><a href="#">全部</a></dd>
+											</dl>
+
+										</div>
+		                            </div>
+	                        </div>
+	                    </div>
+	                </li>
+	            </ul>
+			</div>
+
+		</div>
+		<iframe class="mask" scrolling="no" style="width:100%;height:61px;" frameborder="0"></iframe>
+	</div><!-- yk-header end -->
+</div>
+
+
+<script>
+var passport = '1'
+,loginSwitchToNew = true
+,loginDomainNew = "127.0.0.1{:U('Home/Login/login')}"
+
+
+//only for header
+,qheaderjs = {
+	relyon: [
+		{
+			src			: 'http://localhost/Youku/Public/Home/js/jquery-1.8.3.min.js',
+			condition	: 'typeof($)=="function"',
+			ready		: false
+		},{
+			src			: 'http://localhost/Youku/Public/Home/js/common.js',
+			condition	: 'typeof(login)=="function"',
+			ready		: false
+		},{
+			src			: 'http://localhost/Youku/Public/Home/js/qwindow.js',
+			condition	: 'typeof(Qwindow)=="function"',
+			ready		: false
+		}
+	]
+};
+</script>
+<script type="text/javascript" src='__PUBLIC__/Home/js/chuda.js'></script>
+<script type="text/javascript" src='__PUBLIC__/Home/js/qheader.js'></script>
+
+
+

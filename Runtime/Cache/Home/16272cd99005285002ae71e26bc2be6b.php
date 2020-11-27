@@ -1,0 +1,274 @@
+<?php if (!defined('THINK_PATH')) exit();?>
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="icon" href="/Public/Home/pic/favicon.png" type="image/png" >
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>搜库</title>
+    <meta name="title" content=""> 
+    <link type="text/css" rel="stylesheet" href="/Public/Home/css/search/s_comm.css" />
+    <link type="text/css" rel="stylesheet" href="/Public/Home/css/search/s_video.css" />
+    <script type="text/javascript" src="/Public/Home/js/search/jquery.js"></script>
+    <script type="text/javascript" src="/Public/Home/js/search/iku.js"></script>
+</head>
+<body>
+    <div class="sk_header">
+        <div class="sk_wrap">
+            <div class="sk_search" style="margin-left: 30%;">
+                <a href="<?php echo U('Home/Index/index');?>">
+                    <div style="margin-left: -24%;"><img src="/Public/Home/pic/shizhe_lishu.png" alt="Shizhe 师者"></div>
+                </a>
+                <div class="sotool" style="margin-top: -35px;">
+                    <form  action="/index.php/Home/Search/index" method="get">
+                        
+                        <input class="sotxt" type="text" name="resources" id="headq" value="" />
+                    <button class="btn btn_search" type="submit">搜索</button>
+                    </form>
+
+                </div>
+            </div>
+            
+            <div class="promotion" id="s-001">
+            
+            </div>
+  
+        </div>
+
+    </div>
+    <div style="margin-left: 10px;"><a href="<?php echo U('Home/Index/index');?>"><img src="/Public/Home/pic/back1.jpg" alt="返回首页"></a></div>
+        <div class="sk_container">
+<!--  此处勿删 顶部广告 -->
+    <!-- <div class="sk_banner">           
+                <div id="ab_282" style="height: 100px; display: block;"><div class="mod" id="s_h_508376" align="center"><a href=""  target="_blank"><img src="/Public/Home/css/search-uploads/picture/970-100.jpg" border="0"></a></div></div>    
+                <div id="ab_151"></div>
+            </div> -->
+    <div class="sk_toolbar">
+        <div class="tab">
+            <ul>
+                <li class="current">
+                    <a href="">视频</a>
+                </li>
+                <!-- <li class="">
+                    <a href="">专辑</a>
+                </li> -->
+            </ul>
+        </div>
+        <!-- <div class="switch">
+            <ul>
+                <li class="checked"><a href="javascript:;"><i class="ico20 ico_source"></i>全网</a></li>
+                <li><a href="#"><i class="ico20 ico_source"></i>师者</a></li>
+            </ul>
+        </div> -->
+    </div>
+<!-- ok end -->
+
+    <!-- checked  start -->
+<div class="sk_filter">
+     <div class="sk_toolset">
+            <div class="sub_tab">
+                <ul>
+                    
+                    <li class="current"><a href="">综合排序</a></li>
+                    <li class=""><a href="/index.php/Home/Search/index/search/id">最新发布</a></li>
+                    <li class=""><a href="/index.php/Home/Search/index/play/count">最多播放</a></li>
+                    <!-- <li class=""><a href="">最多评论</a></li>
+                    <li class=""><a href="">最多收藏</a></li> -->
+                </ul>
+            </div>
+            <!-- ======================筛选条件功能待开发========================= -->
+            <!-- <div class="sk_filter_handle">
+                <a href="javascript:;" >筛选条件<i class="ico_down"></i></a>
+            </div> -->
+                  <div class="vnum">共找到 <span><?php echo ($conunt); ?></span>  个视频</div>
+            <div class="clearfix"></div>
+            <div class="viewtype">
+                 <ul>
+                    <li class="selected">
+                        <a title="棋盘式" href="javascript:;" class="chesstype ico ico_rows">棋盘式</a>
+                    </li>
+                    <li class="">
+                        <a title="列表式" href="javascript:;" class="listtype ico ico_cols">列表式</a>
+                    </li>
+                </ul>
+            </div>
+          </div>
+<!-- checked  end -->
+<!-- source  start -->
+   <div class="sk_filter_panel" style="display: none;">
+      <!-- <div class="entry via">
+        <label class="ico ico_label">来源</label>
+        <ul>
+            
+            <li class="current"><a href="">不限</a></li>
+            <li class=""><a href="">师者</a></li>
+        </ul>
+        <div class="clearfix"></div>
+    </div> -->
+    <div class="entry quality">
+        <label class="ico ico_label">画质</label>
+        <ul>
+            <li class="current"><a href="">不限</a></li>
+            <li class=""><a href="">高清</a></li>
+            <li class=""><a href="">超清</a></li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="entry release">
+        <label class="ico ico_label">发布时间</label>
+        <ul>
+            
+            <li class="current"><a href="">不限</a></li>
+            <li class=""><a href="">一天</a></li>
+            <li class=""><a href="">一周</a></li>
+            <li class=""><a href="">一月</a></li>
+            <li class=""><a href="">一年</a></li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="entry time">
+        <label class="ico ico_label">时长</label>
+        <ul>
+            <li class="current"><a href="">不限</a></li>
+            <li class=""><a href="">60分钟以上</a></li>
+            <li class=""><a href="">30-60分钟</a></li>
+            <li class=""><a href="">10-30分钟</a></li>
+            <li class=""><a href="">0-10分钟</a></li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</div>
+</div>
+<!-- source  end -->
+
+<!-- vedio start -->
+
+    <div class="sk_result">
+        <div class="sk-box">
+            <div class="bd">
+                <div class="sk-vlist">
+                
+                    <?php if(is_array($model)): foreach($model as $key=>$v): ?><div class="v">    
+                        <div class="v-thumb">
+                            <a href="<?php echo U('Home/Play/index');?>?videoId=<?php echo ($v["id"]); ?>"><img alt="<?php echo ($v["title"]); ?>" src="<?php echo ($v['pic']); ?>" onerror=""></a>
+                                              <div class="v-thumb-tagrt">
+                                <div class="definition">
+                                    <span class="ico__SD"></span>
+                                </div>
+                            </div>
+                            <!-- ++++++++++++++++++++++++++++++视频时常很重要,记得要加上+++++++++++++++++++++++++++ -->
+                            <!-- <div class="v-thumb-tagrb">                    
+                                <span class="v-time">23:40</span>                              
+                            </div> -->
+
+                        </div>
+                   
+                        <div class="v-meta va">
+                            <div class="v-meta-title" >
+                                <a title="<?php echo ($v["title"]); ?>" style="display:none;" showall="true" target="_blank" href="<?php echo U('Home/Play/index');?>?videoId=<?php echo ($v["id"]); ?>" ><span class="highlight"><?php echo ($v["title"]); ?></span> </a>
+                                <a title="<?php echo ($v["title"]); ?>" style="" showall="false" target="_blank" href="<?php echo U('Home/Play/index');?>?videoId=<?php echo ($v["id"]); ?>" ><span class="highlight"><?php echo ($v["title"]); ?></span></a>
+                            </div>
+                            <div class="v-meta-entry">
+                                  <div class="v-meta-data"><label>作者:</label> 
+                                        <span class="username">
+                                                <a target="_blank" charset="811-1-1-1" href="#"><?php echo ($v["uid"]); ?></a>  
+                                        </span>
+                                    </div>
+                                    <div class="v-meta-data"><label>播放: </label> <span><?php echo ($v["count"]); ?></span></div>
+                                <div class="v-meta-data"><label>来源: </label> <span class="siteurl">师者</span></div>
+                                <div class="v-meta-data"><label>发布: </label> <span class="pub"><?php echo ($v["time"]); ?></span></div>
+                            </div>
+                        </div>
+                    </div><?php endforeach; endif; ?>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 此处勿删 -->
+    <!-- <div class="sk_relkeys" id="footeraboutid" _log_mo="3">
+        <label>相关搜索</label>
+        <ul>
+        
+            <li><a href="/search_video/q_%E4%B8%AD%E5%9B%BD%E5%A5%BD%E5%A3%B0%E9%9F%B3%E9%99%88%E4%B9%90%E5%9F%BA?f=3" target="_blank" title="中国好声音陈乐基"  _log_type="3" _log_ct="11" _log_pos="1">中国好声音陈乐基</a></li>
+        
+            <li><a href="/search_video/q_%E9%A9%AC%E4%BA%91%E4%B8%AD%E5%9B%BD%E5%A5%BD%E5%A3%B0%E9%9F%B3?f=3" target="_blank" title="马云中国好声音"  _log_type="3" _log_ct="11" _log_pos="2">马云中国好声音</a></li>
+        
+            <li><a href="/search_video/q_%E9%BB%98%E5%91%A8%E6%9D%B0%E4%BC%A6%E4%B8%AD%E5%9B%BD%E5%A5%BD%E5%A3%B0%E9%9F%B3?f=3" target="_blank" title="默周杰伦中国好声音"  _log_type="3" _log_ct="11" _log_pos="3">默周杰伦中国好声音</a></li>
+        
+            <li><a href="/search_video/q_%E5%A5%BD%E5%A3%B0%E9%9F%B3?f=3" target="_blank" title="好声音"  _log_type="3" _log_ct="11" _log_pos="4">好声音</a></li>
+        
+            <li><a href="/search_video/q_%E9%A9%AC%E4%BA%91%E5%A5%BD%E5%A3%B0%E9%9F%B3?f=3" target="_blank" title="马云好声音"  _log_type="3" _log_ct="11" _log_pos="5">马云好声音</a></li>
+            
+        </ul>
+        <div class="clearfix"></div>
+    </div> -->
+    
+    
+    <!-- video end -->
+
+					<div class="sk_pager">
+							<ul>
+
+									 <li class=""><span><?php echo ($pages); ?></span></li>
+							</ul>
+					</div>
+
+ <!-- 低部广告 -->
+      <!-- <div class="sk_banner">
+                
+                <div id="ab_282" style="height: 100px; display: block;"><div class="mod" id="s_h_508376" align="center"><a href=""  target="_blank"><img src="/Public/Home/css/search-uploads/picture/970-100_002.jpg" border="0"></a></div></div>    
+                <div id="ab_151"></div>
+            </div> -->
+</div>
+<!-- container end -->
+
+
+<div class="sk_footer">
+    <div class="copyright">
+        Copyright&copy;2020 师者版权所有
+        <a href="http://www.miibeian.gov.cn/" target="_blank">京ICP证060288号</a>
+        <!-- <a href="/service/agreement.html" target="_blank">免责声明</a>
+        <a href="/service/protocol.html" target="_blank">开放协议</a> -->
+    </div>
+</div>
+
+<!-- 反馈 -->
+<div id="sideBar"></div>
+
+<!-- about soku count start  -->
+
+<!-- about soku count end  -->
+</body>
+
+<!-- 显示模式切换 -->
+
+<script type="text/javascript">
+window.soku_logExt = "&soku=0|358362";
+var isIku = false;
+var loadJs = new LoadJs({"load":[{"src":"/Public/Home/js/search/youkutool.js"},
+                                {"src":"/Public/Home/js/search/sk-plugins.js","callback":function(){
+                                    $("span.remind span[countdown^='1']").each(function(){
+                                        $(this).countdown({"max":1000*60*60*2,"onTime":1439265087363,"endTime":parseInt($(this).attr("countdown"),10)});
+                                    });
+                                    if(!isIku){
+                                        $("a[typeboolean='true']").playlist();
+                                        $("#sideBar").feedback({"keyword":"1","source":1,"app":false});
+                                    }
+                                }},
+                                {"src":"/Public/Home/js/search/sk-common.js","callback":function(){
+                                    SourceView.init();
+                                    HeaderControl.init();
+                                    MajorControl.init();
+                                    MajorUserControl.init();
+                                }},
+                                {"src":"/Public/Home/js/search/youlog.js"},
+                                {"src":"/Public/Home/js/search/soku-analytics.js"}
+                                ]}).include();
+if(!isIku){
+loadJs.include([{"callback":function(){XBox.init({"site":2,"history":true});}},
+                {"src":""}
+                ]);
+}
+</script>
+
+</html>
